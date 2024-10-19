@@ -105,7 +105,7 @@ public class TilesGenerator : MonoBehaviour
 
     private void GenerateBones()
     {
-
+        boneDustPos = new List<Vector3Int>();
         gridBonesNumber = new int[gridSize.x, gridSize.y];
         gridBones.ClearAllTiles();
         generatedBones = new List<List<Vector3Int>>();
@@ -344,6 +344,11 @@ public class TilesGenerator : MonoBehaviour
                     brokenBone = true; break;
                 }
                 gridBones.SetTileFlags(coordAfterOffset, TileFlags.None);
+                Debug.Log("generatedBones.Count: " + generatedBones.Count);
+                Debug.Log("generatedBonesSprites.Count: " + generatedBonesSprites.Count);
+                Debug.Log("generatedBonesSprites[currentBone].tilesInOrder.Length" + generatedBonesSprites[currentBone].tilesInOrder.Length);
+                Debug.Log("generatedBones[currentBone].Count - 1 - boneCoord: " + (generatedBones[currentBone].Count - 1 - boneCoord));
+                Debug.Log("currentBone: " + currentBone);
                 gridBones.SetTile(coordAfterOffset, generatedBonesSprites[currentBone].tilesInOrder[generatedBones[currentBone].Count - 1 - boneCoord]);
 
                 //Debug.Log("Bone generated on: " + coordAfterOffset);
