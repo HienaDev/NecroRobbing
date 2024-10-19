@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5e911023577b846a6254d7a5d6d37a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 8, y: 6}
+  gridSize: {x: 10, y: 10}
   gridDirt: {fileID: 1588745934}
   hardTile3: {fileID: 11400000, guid: 9fa2260347eecd84cab9eee283ab7598, type: 2}
   softTile2: {fileID: 11400000, guid: 6dd8d725c7bf7fd4292a4cb37fd2823a, type: 2}
@@ -630,11 +630,34 @@ MonoBehaviour:
   - boneConfig:
     - {x: 1, y: 1, z: 1}
     tilesInOrder:
-    - {fileID: 11400000, guid: 3448874bbce9adc4bade7e7b1b42a357, type: 2}
-    - {fileID: 11400000, guid: 3448874bbce9adc4bade7e7b1b42a357, type: 2}
-    - {fileID: 11400000, guid: 3448874bbce9adc4bade7e7b1b42a357, type: 2}
-  mediumBones: []
-  bigBones: []
+    - {fileID: 11400000, guid: e428c746edfdd3b45ba8bc0c89557927, type: 2}
+    - {fileID: 11400000, guid: 7615c53af5c9b3a49af8d7273e955723, type: 2}
+    - {fileID: 11400000, guid: 084f68aff34a29847a82eb6641428ff4, type: 2}
+  mediumBones:
+  - boneConfig:
+    - {x: 0, y: 1, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    tilesInOrder:
+    - {fileID: 11400000, guid: 92b6d4ef21adbf74aab19a9b2ed87b18, type: 2}
+    - {fileID: 11400000, guid: 7bda1fa23742a2840bdb4fdd1cca7488, type: 2}
+    - {fileID: 11400000, guid: 341b523c2edbbfc409b2a2df90777b80, type: 2}
+    - {fileID: 11400000, guid: 54fc91e3a5312c1458eab1498f28482d, type: 2}
+  bigBones:
+  - boneConfig:
+    - {x: 1, y: 1, z: 1}
+    - {x: 1, y: 1, z: 1}
+    - {x: 1, y: 1, z: 1}
+    tilesInOrder:
+    - {fileID: 11400000, guid: f0fcb163e224dc04b8c6f22fb6ad0083, type: 2}
+    - {fileID: 11400000, guid: e12b5f14aa6029f4488f554dffa3042c, type: 2}
+    - {fileID: 11400000, guid: 3c628f9bb50247943bee55d77f5b1d02, type: 2}
+    - {fileID: 11400000, guid: 871a93b5db0eab549b2ec5b839c32687, type: 2}
+    - {fileID: 11400000, guid: 236420b68dc816641b94cb89860a35c4, type: 2}
+    - {fileID: 11400000, guid: b908e75017557f34da46b5b3b5c95260, type: 2}
+    - {fileID: 11400000, guid: 3c6c9899d9446cc4f9ac683b2515a908, type: 2}
+    - {fileID: 11400000, guid: ad1ccf6305d892f4ebdb6b94166cd3ec, type: 2}
+    - {fileID: 11400000, guid: 3d7a0f501427d3b499255cf431027418, type: 2}
 --- !u!1 &1320922334
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0610edd506448774f94562cc0da91cf3
+guid: 5656e5be49719f94d891de3eaa37d273
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5103713592557637184
-    second: LegBone_M_0
+      213: 7668770754677468240
+    second: LegBone_S_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,11 +126,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LegBone_M_0
+      name: LegBone_S_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -141,58 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c1f4483787fb29b0800000000000000
-      internalID: -5103713592557637184
+      spriteID: 05c6478de52fc6a60800000000000000
+      internalID: 7668770754677468240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LegBone_M_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c1e0484ff7a7ce49a4c58273f2c4103
-      internalID: 152426459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LegBone_M_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e14c06ea23d8c094bb00d7aa490ee545
-      internalID: 689293319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LegBone_M_3
+      name: LegBone_S_1
       rect:
         serializedVersion: 2
         x: 32
@@ -207,8 +163,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99c5559bc954d5442908d60cfc5fa65e
-      internalID: 1984567908
+      spriteID: 07e9391507fbc7e4e886698ecfb2b401
+      internalID: -290002422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LegBone_S_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78fe069fbba12564189ba57935f9f199
+      internalID: 1836358590
       vertices: []
       indices: 
       edges: []
@@ -217,7 +195,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8aa769fbaf54a4c4684643a8f38e9431
+    spriteID: 6c916c582ba3b784e95a67608a7d927a
     internalID: 0
     vertices: []
     indices: 
@@ -227,10 +205,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LegBone_M_0: -5103713592557637184
-      LegBone_M_1: 152426459
-      LegBone_M_2: 689293319
-      LegBone_M_3: 1984567908
+      LegBone_S_0: 7668770754677468240
+      LegBone_S_1: -290002422
+      LegBone_S_2: 1836358590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

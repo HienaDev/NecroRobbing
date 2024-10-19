@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0610edd506448774f94562cc0da91cf3
+guid: 9fb80af5e2353aa45a9bfbb63ad76b63
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5103713592557637184
-    second: LegBone_M_0
+      213: 6844277143228963253
+    second: Torax_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LegBone_M_0
+      name: Torax_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,14 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c1f4483787fb29b0800000000000000
-      internalID: -5103713592557637184
+      spriteID: 5b9dc7a9cc1cbfe50800000000000000
+      internalID: 6844277143228963253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LegBone_M_1
+      name: Torax_1
       rect:
         serializedVersion: 2
         x: 32
@@ -163,14 +163,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c1e0484ff7a7ce49a4c58273f2c4103
-      internalID: 152426459
+      spriteID: 35233b084c2869d45b724d767b1a4cb4
+      internalID: -1396123955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LegBone_M_2
+      name: Torax_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a516eacd62d538f47b4d9029d91cbf42
+      internalID: 555540074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torax_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8973e40774c48cb48be9f160e1ae6b9d
+      internalID: 804678609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torax_4
       rect:
         serializedVersion: 2
         x: 32
@@ -185,14 +229,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e14c06ea23d8c094bb00d7aa490ee545
-      internalID: 689293319
+      spriteID: 30b16da54cd9d124da6bc7809eed94fe
+      internalID: 1930406091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LegBone_M_3
+      name: Torax_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfe13c18a97a524e999918a4a96e23b
+      internalID: -714365617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torax_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3acc0edcd214f04eaca17d9d258a876
+      internalID: -372933823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torax_7
       rect:
         serializedVersion: 2
         x: 32
@@ -207,8 +295,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99c5559bc954d5442908d60cfc5fa65e
-      internalID: 1984567908
+      spriteID: f969d843e9724d449a9550e1f20ac479
+      internalID: -609570641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torax_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e21a1ef83bc9014999e02cf0834b401
+      internalID: -1216533867
       vertices: []
       indices: 
       edges: []
@@ -217,7 +327,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8aa769fbaf54a4c4684643a8f38e9431
+    spriteID: c4275729309a9944a87e7ca3e69e076e
     internalID: 0
     vertices: []
     indices: 
@@ -227,10 +337,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LegBone_M_0: -5103713592557637184
-      LegBone_M_1: 152426459
-      LegBone_M_2: 689293319
-      LegBone_M_3: 1984567908
+      Torax_0: 6844277143228963253
+      Torax_1: -1396123955
+      Torax_2: 555540074
+      Torax_3: 804678609
+      Torax_4: 1930406091
+      Torax_5: -714365617
+      Torax_6: -372933823
+      Torax_7: -609570641
+      Torax_8: -1216533867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

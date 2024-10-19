@@ -77,7 +77,26 @@ public class TilesGenerator : MonoBehaviour
 
         for (int i = 0; i < numberOfBonesToGenerate; i++)
         {
-            int numberOfBone = Random.Range(0, smallBones.Length);
+            int typeOfBone = Random.Range(0, 3);
+
+            Bone[] listOfBones = null;
+
+            switch(typeOfBone)
+            {
+                case 0:
+                    listOfBones = smallBones;
+                    break;
+                case 1:
+                    listOfBones = mediumBones;
+                    break;
+                case 2:
+                    listOfBones = bigBones;
+                    break;
+                default:
+                    break;
+            }
+
+            int numberOfBone = Random.Range(0, listOfBones.Length);
 
             bool generated = false;
 
@@ -88,9 +107,9 @@ public class TilesGenerator : MonoBehaviour
 
                 List<Vector3Int> changedTiles = new List<Vector3Int>();
 
-                for (int currentVector = 0; currentVector < smallBones[numberOfBone].boneConfig.Length; currentVector++)
+                for (int currentVector = 0; currentVector < listOfBones[numberOfBone].boneConfig.Length; currentVector++)
                 {
-                    if (smallBones[numberOfBone].boneConfig[currentVector].x == 1)
+                    if (listOfBones[numberOfBone].boneConfig[currentVector].x == 1)
                     {
                         if((x > gridSize.x - 1 || x < 0) || (y + currentVector > gridSize.y - 1 || y + currentVector < 0))
                         {
@@ -113,7 +132,7 @@ public class TilesGenerator : MonoBehaviour
                         }
                     }
 
-                    if (smallBones[numberOfBone].boneConfig[currentVector].y == 1)
+                    if (listOfBones[numberOfBone].boneConfig[currentVector].y == 1)
                     {
                         if ((x + 1 > gridSize.x - 1 || x + 1 < 0) || (y + currentVector > gridSize.y - 1 || y + currentVector < 0))
                         {
@@ -136,7 +155,7 @@ public class TilesGenerator : MonoBehaviour
                         }
                     }
 
-                    if (smallBones[numberOfBone].boneConfig[currentVector].z == 1)
+                    if (listOfBones[numberOfBone].boneConfig[currentVector].z == 1)
                     {
                         if ((x + 2 > gridSize.x - 1 || x + 2 < 0) || (y + currentVector > gridSize.y - 1 || y + currentVector < 0))
                         {
@@ -176,7 +195,7 @@ public class TilesGenerator : MonoBehaviour
                     {
                         Vector3Int coordAfterOffset = changedTiles[boneCoord] - new Vector3Int((gridSize.x / 2), (gridSize.y / 2), 0);
                         gridBones.SetTileFlags(coordAfterOffset, TileFlags.None);
-                        gridBones.SetTile(coordAfterOffset, smallBones[numberOfBone].tilesInOrder[changedTiles.Count - 1 - boneCoord]);
+                        gridBones.SetTile(coordAfterOffset, listOfBones[numberOfBone].tilesInOrder[changedTiles.Count - 1 - boneCoord]);
                         gridBones.SetColor(coordAfterOffset, tileColor);
                         Debug.Log("Bone generated on: " + coordAfterOffset);
                     }
