@@ -164,7 +164,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a363f58f71924414dbc4620a7b396023
-      internalID: 1177477467
+      internalID: 8245860361913080663
       vertices: []
       indices: 
       edges: []
@@ -186,7 +186,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e50ea27fc4129aa48a8684521f999fb0
-      internalID: 1902126163
+      internalID: -9148765780453669779
       vertices: []
       indices: 
       edges: []
@@ -208,7 +208,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 104bc9d1adb6b8d47ad9d81eb7f47063
-      internalID: -362926681
+      internalID: 8549162161551635179
       vertices: []
       indices: 
       edges: []
@@ -217,20 +217,20 @@ TextureImporter:
       name: LegBone_M_Parasitic_Marrow_4
       rect:
         serializedVersion: 2
-        x: 9
-        y: 2
-        width: 48
-        height: 91
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1e75119ba4877ad4d9b0e0a7786b86f3
-      internalID: -1470500183
+      spriteID: 3e3737ef35026d4b0800000000000000
+      internalID: -5416105956743089181
       vertices: []
       indices: 
       edges: []
@@ -239,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7909bf28ecc06c343840ba070e1b5867
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -250,10 +250,10 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       LegBone_M_Parasitic_Marrow_0: -6061283141882291573
-      LegBone_M_Parasitic_Marrow_1: 1177477467
-      LegBone_M_Parasitic_Marrow_2: 1902126163
-      LegBone_M_Parasitic_Marrow_3: -362926681
-      LegBone_M_Parasitic_Marrow_4: -1470500183
+      LegBone_M_Parasitic_Marrow_1: 8245860361913080663
+      LegBone_M_Parasitic_Marrow_2: -9148765780453669779
+      LegBone_M_Parasitic_Marrow_3: 8549162161551635179
+      LegBone_M_Parasitic_Marrow_4: -5416105956743089181
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

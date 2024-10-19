@@ -164,7 +164,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 7798fd775277e1e488878632fae4a596
-      internalID: 939164265
+      internalID: -3855203234161840024
       vertices: []
       indices: 
       edges: []
@@ -186,7 +186,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8531afcd4be0ff249aa230a219453101
-      internalID: 1518003808
+      internalID: -2744180687017058574
       vertices: []
       indices: 
       edges: []
@@ -208,7 +208,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a8f7d0c6adbd00f41b8dd7ed19564154
-      internalID: 155563172
+      internalID: 6407409127801254036
       vertices: []
       indices: 
       edges: []
@@ -217,20 +217,20 @@ TextureImporter:
       name: ArmBone_M_Floral_Expansion_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 80
-        height: 57
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c7ab81b515daa0747932185e023a6d88
-      internalID: 603469238
+      spriteID: c5d4906b9c3aa2280800000000000000
+      internalID: -9067254813019255460
       vertices: []
       indices: 
       edges: []
@@ -239,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 12fd723aa8cf94041affd0f17d04ff9d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -250,10 +250,10 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       ArmBone_M_Floral_Expansion_0: 5975002957805529234
-      ArmBone_M_Floral_Expansion_1: 939164265
-      ArmBone_M_Floral_Expansion_2: 1518003808
-      ArmBone_M_Floral_Expansion_3: 155563172
-      ArmBone_M_Floral_Expansion_4: 603469238
+      ArmBone_M_Floral_Expansion_1: -3855203234161840024
+      ArmBone_M_Floral_Expansion_2: -2744180687017058574
+      ArmBone_M_Floral_Expansion_3: 6407409127801254036
+      ArmBone_M_Floral_Expansion_4: -9067254813019255460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

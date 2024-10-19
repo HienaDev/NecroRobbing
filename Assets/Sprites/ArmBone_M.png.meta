@@ -164,7 +164,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 796bf3487c3328e41bd722f4e6ce2465
-      internalID: -1326475257
+      internalID: -8555408575292637965
       vertices: []
       indices: 
       edges: []
@@ -186,7 +186,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b1f577d82b922364896af5f1ab6962b7
-      internalID: -1446012313
+      internalID: 882964316129267707
       vertices: []
       indices: 
       edges: []
@@ -208,7 +208,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5e530e9e296b50344b0f4ae608b85fa3
-      internalID: -633773369
+      internalID: 2181570926840901851
       vertices: []
       indices: 
       edges: []
@@ -217,20 +217,20 @@ TextureImporter:
       name: ArmBone_M_4
       rect:
         serializedVersion: 2
-        x: 6
-        y: 8
-        width: 77
-        height: 52
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 93fbfc8bffaf7c547988a34a672c3c00
-      internalID: 173600887
+      spriteID: 54f4bf9fd4afb1360800000000000000
+      internalID: 7141576846939475781
       vertices: []
       indices: 
       edges: []
@@ -239,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 954aea61419914042bc42ed34c04af3b
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -250,10 +250,10 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       ArmBone_M_0: -3384189557606535714
-      ArmBone_M_1: -1326475257
-      ArmBone_M_2: -1446012313
-      ArmBone_M_3: -633773369
-      ArmBone_M_4: 173600887
+      ArmBone_M_1: -8555408575292637965
+      ArmBone_M_2: 882964316129267707
+      ArmBone_M_3: 2181570926840901851
+      ArmBone_M_4: 7141576846939475781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

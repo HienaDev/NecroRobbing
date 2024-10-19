@@ -164,7 +164,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8472af5326a888b4f8325b610ac7481c
-      internalID: 1260147529
+      internalID: 7086739201666352817
       vertices: []
       indices: 
       edges: []
@@ -186,7 +186,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ecf56dbe35be0934fb29d6d910d91d5e
-      internalID: 255764807
+      internalID: -5023805487831125837
       vertices: []
       indices: 
       edges: []
@@ -197,40 +197,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 0
+        height: 0
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: aa7839e3c5d98a94f900377243e35cca
-      internalID: 1884076433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArmBone_S_4
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 8
-        width: 50
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc5ced5b6798d0943a41ccde31485ec5
-      internalID: 584683961
+      spriteID: 05a5c184c9b406f30800000000000000
+      internalID: 4566733156750482000
       vertices: []
       indices: 
       edges: []
@@ -239,7 +217,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5dd00e138bbb7744fb059f4968e1eb49
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -250,10 +228,9 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       ArmBone_S_0: -2776643151469091864
-      ArmBone_S_1: 1260147529
-      ArmBone_S_2: 255764807
-      ArmBone_S_3: 1884076433
-      ArmBone_S_4: 584683961
+      ArmBone_S_1: 7086739201666352817
+      ArmBone_S_2: -5023805487831125837
+      ArmBone_S_3: 4566733156750482000
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -164,7 +164,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e6ea670ea384e644a9cbf313d9f9ad6e
-      internalID: 474541939
+      internalID: -8338691976237824853
       vertices: []
       indices: 
       edges: []
@@ -186,7 +186,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: d0c6a49fdd532654eb312a5ec9a96e0e
-      internalID: -1969463154
+      internalID: -146359612838373078
       vertices: []
       indices: 
       edges: []
@@ -208,7 +208,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1092c4dbdbbe937458ec8214169c2e50
-      internalID: -363344496
+      internalID: -812422809068384321
       vertices: []
       indices: 
       edges: []
@@ -217,20 +217,20 @@ TextureImporter:
       name: LegBone_M_Meat_Crusher_4
       rect:
         serializedVersion: 2
-        x: 12
-        y: 2
-        width: 41
-        height: 90
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b3c7527c73b03b149977c1802f297e76
-      internalID: -1585158897
+      spriteID: 5bcd07806715f51e0800000000000000
+      internalID: -2206955724998648651
       vertices: []
       indices: 
       edges: []
@@ -239,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 88cc7500d56aff04d9f7c89fa98e40ae
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -250,10 +250,10 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       LegBone_M_Meat_Crusher_0: -4690645347521360294
-      LegBone_M_Meat_Crusher_1: 474541939
-      LegBone_M_Meat_Crusher_2: -1969463154
-      LegBone_M_Meat_Crusher_3: -363344496
-      LegBone_M_Meat_Crusher_4: -1585158897
+      LegBone_M_Meat_Crusher_1: -8338691976237824853
+      LegBone_M_Meat_Crusher_2: -146359612838373078
+      LegBone_M_Meat_Crusher_3: -812422809068384321
+      LegBone_M_Meat_Crusher_4: -2206955724998648651
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

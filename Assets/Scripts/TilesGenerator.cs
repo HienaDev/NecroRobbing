@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class TilesGenerator : MonoBehaviour
 {
@@ -29,11 +30,13 @@ public class TilesGenerator : MonoBehaviour
     [SerializeField] private Bone[] bigBones;
     private int[,] gridBonesNumber;
     private List<List<Vector3Int>> generatedBones = new List<List<Vector3Int>>();
+    private List<Vector3Int> boneDustPos = new List<Vector3Int>();
     private List<Bone> generatedBonesSprites = new List<Bone>();
 
     private List<BoneBase> boneInventory = new List<BoneBase>();
 
     [Header("GRID"), SerializeField] private ClickOnTiles clickOnTileScript;
+    [SerializeField] private Image UIInventory;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -243,16 +246,16 @@ public class TilesGenerator : MonoBehaviour
                 switch (gridDirtNumbers[x, y])
                 {
                     case 50:
-                        bool boneExposed = CheckIfBoneExposed(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
-                                                        y - (gridSize.y / 2 - gridSize.y % 2)
-                                                        , 0));
+                        bool boneExposed = CheckIfBoneExposed(
+                            new Vector3Int(x, y, 0) - new Vector3Int((gridSize.x / 2), (gridSize.y / 2), 0));
 
-                        if(boneExposed)
+                        if (boneExposed)
                         {
                             Debug.Log("bone added");
-                            foreach(BoneBase bone in boneInventory)
+                            foreach (BoneBase bone in boneInventory)
                             {
-                                Debug.Log(bone.BoneType);
+                                Debug.Log(bone.name);
+                                Debug.Log(bone.BoneSprite.border);
                             }
                         }
 
@@ -280,13 +283,13 @@ public class TilesGenerator : MonoBehaviour
                                                         , 0), null);
                         break;
                     case int n when n < 0:
-                        if(gridDirtNumbers[x, y] <= -1)
+                        if (gridDirtNumbers[x, y] <= -1)
                         {
                             gridDirt.SetTile(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
                                                         y - (gridSize.y / 2 - gridSize.y % 2)
                                                         , 0), badBrokenTile);
                         }
-                        
+
                         break;
                     default:
                         gridDirt.SetTile(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
@@ -299,6 +302,16 @@ public class TilesGenerator : MonoBehaviour
                 }
             }
         }
+
+        gridBones.ClearAllTiles();
+
+
+        foreach (Vector3Int x in boneDustPos)
+        {
+            gridBones.SetTile(x, boneDust);
+        }
+
+
 
         for (int currentBone = 0; currentBone < generatedBones.Count; currentBone++)
         {
@@ -314,7 +327,7 @@ public class TilesGenerator : MonoBehaviour
                 gridBones.SetTileFlags(coordAfterOffset, TileFlags.None);
                 gridBones.SetTile(coordAfterOffset, generatedBonesSprites[currentBone].tilesInOrder[generatedBones[currentBone].Count - 1 - boneCoord]);
 
-                Debug.Log("Bone generated on: " + coordAfterOffset);
+                //Debug.Log("Bone generated on: " + coordAfterOffset);
             }
 
             if (brokenBone)
@@ -324,7 +337,7 @@ public class TilesGenerator : MonoBehaviour
                     Vector3Int coordAfterOffset = generatedBones[currentBone][boneCoord] - new Vector3Int((gridSize.x / 2), (gridSize.y / 2), 0);
                     gridBones.SetTileFlags(coordAfterOffset, TileFlags.None);
                     gridBones.SetTile(coordAfterOffset, boneDust);
-
+                    boneDustPos.Add(coordAfterOffset);
                 }
                 generatedBones.Remove(generatedBones[currentBone]);
                 generatedBonesSprites.Remove(generatedBonesSprites[currentBone]);
@@ -339,37 +352,47 @@ public class TilesGenerator : MonoBehaviour
     private bool CheckIfBoneExposed(Vector3Int bonePosition)
     {
         int currentBone = 800;
-        
-        for (int bone = 0; bone <= generatedBones.Count; bone++)
+
+        Debug.Log("generatedBones: " + generatedBones.Count + " generatedBonesSprites.Count: " + generatedBonesSprites.Count);
+
+        for (int bone = 0; bone < generatedBones.Count; bone++)
         {
+            Debug.Log(generatedBonesSprites[bone].boneBase.name);
             foreach (Vector3Int x in generatedBones[bone])
             {
-                if(x == bonePosition)
+                Debug.Log((x - new Vector3Int(gridSize.x / 2, gridSize.y / 2, 0)) + "is different from" + bonePosition);
+                if ((x - new Vector3Int(gridSize.x / 2, gridSize.y / 2, 0)) == bonePosition)
                 {
+                    Debug.Log("found epic bone: " + generatedBonesSprites[bone].boneBase.name);
                     currentBone = bone; break;
                 }
             }
         }
 
         bool exposed = true;
-        foreach (Vector3Int x in generatedBones[currentBone])
-        {
-            if (gridDirt.GetTile(x) != null)
+        if (currentBone != 800)
+            foreach (Vector3Int x in generatedBones[currentBone])
             {
-                exposed = false;
+                Vector3Int currentPosition = x - new Vector3Int(gridSize.x / 2, gridSize.y / 2, 0);
+                if (gridDirt.GetTile(currentPosition) != null)
+                {
+                    Debug.Log("not exposed necause of: " + currentPosition + " tile: " + gridDirt.GetTile(currentPosition).name);
+                    gridDirt.SetTile(currentPosition, boneDust);
+                    exposed = false;
+                }
             }
-        }
 
         if (currentBone == 800 || exposed == false)
             return false;
         else
         {
-
+            Debug.Log(currentBone);
             boneInventory.Add(generatedBonesSprites[currentBone].boneBase);
+            UIInventory.sprite = generatedBonesSprites[currentBone].boneBase.BoneSprite;
             generatedBones.Remove(generatedBones[currentBone]);
             generatedBonesSprites.Remove(generatedBonesSprites[currentBone]);
             return true;
         }
- 
+
     }
 }

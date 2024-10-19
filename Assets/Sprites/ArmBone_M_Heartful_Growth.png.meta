@@ -164,7 +164,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c43177ed6fd0e8041b4c8926ad9182c7
-      internalID: -1265968083
+      internalID: -2483454755470657533
       vertices: []
       indices: 
       edges: []
@@ -186,7 +186,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 36fe75e725c0a3447ad3f152db1296af
-      internalID: 1719400899
+      internalID: -5706838649110167745
       vertices: []
       indices: 
       edges: []
@@ -195,20 +195,20 @@ TextureImporter:
       name: ArmBone_M_Heartful_Growth_3
       rect:
         serializedVersion: 2
-        x: 6
-        y: 8
-        width: 50
-        height: 45
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 40dcea51c0c1d204ea2d712d71d1c35d
-      internalID: -1639435031
+      spriteID: ca3af2f5ecfc85890800000000000000
+      internalID: -7468991496726797396
       vertices: []
       indices: 
       edges: []
@@ -217,7 +217,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 27f08c7bebc2de94a9b1c0021bc24885
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -228,9 +228,9 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       ArmBone_M_Heartful_Growth_0: -3269525987422854044
-      ArmBone_M_Heartful_Growth_1: -1265968083
-      ArmBone_M_Heartful_Growth_2: 1719400899
-      ArmBone_M_Heartful_Growth_3: -1639435031
+      ArmBone_M_Heartful_Growth_1: -2483454755470657533
+      ArmBone_M_Heartful_Growth_2: -5706838649110167745
+      ArmBone_M_Heartful_Growth_3: -7468991496726797396
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

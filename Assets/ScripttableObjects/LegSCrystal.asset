@@ -10,13 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00c6405a88e78594a922e48257ea998f, type: 3}
-<<<<<<<< HEAD:Assets/ScripttableObjects/LegMedium.asset
-  m_Name: LegMedium
-========
-  m_Name: LegS
->>>>>>>> 1ed14e3f1f0b2514ee71df016208be6351d931fe:Assets/ScripttableObjects/LegS.asset
+  m_Name: LegSCrystal
   m_EditorClassIdentifier: 
   boneType: 3
   boneSize: 1
   powerLevel: 1
-  boneSprite: {fileID: -1256030612, guid: 5656e5be49719f94d891de3eaa37d273, type: 3}
+  boneSprite: {fileID: 1633241852, guid: 32500da5d1c27ca4081686805db4f2e0, type: 3}
