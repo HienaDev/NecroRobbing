@@ -17,6 +17,8 @@ public class TilesGenerator : MonoBehaviour
     [SerializeField] private Tile hardTile3;
     [SerializeField] private Tile softTile2;
     [SerializeField] private Tile dirtTile1;
+    [SerializeField] private Tile badBrokenTile;
+    [SerializeField] private Tile boneDust;
     private int[,] gridDirtNumbers;
 
     [Header("Bones"), SerializeField] private Tilemap gridBones;
@@ -258,6 +260,15 @@ public class TilesGenerator : MonoBehaviour
                                                         y - (gridSize.y / 2 - gridSize.y % 2)
                                                         , 0), null);
                         break;
+                    case int n when n < 0:
+                        if(gridDirtNumbers[x, y] <= -1)
+                        {
+                            gridDirt.SetTile(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
+                                                        y - (gridSize.y / 2 - gridSize.y % 2)
+                                                        , 0), badBrokenTile);
+                        }
+                        
+                        break;
                     default:
                         gridDirt.SetTile(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
                                                         y - (gridSize.y / 2 - gridSize.y % 2)
@@ -272,13 +283,33 @@ public class TilesGenerator : MonoBehaviour
 
         for (int currentBone = 0; currentBone < generatedBones.Count; currentBone++)
         {
+            bool brokenBone = false;
             for (int boneCoord = 0; boneCoord < generatedBones[currentBone].Count; boneCoord++)
             {
+
                 Vector3Int coordAfterOffset = generatedBones[currentBone][boneCoord] - new Vector3Int((gridSize.x / 2), (gridSize.y / 2), 0);
+                if (gridDirt.GetTile(coordAfterOffset) == badBrokenTile)
+                {
+                    brokenBone = true; break;
+                }
                 gridBones.SetTileFlags(coordAfterOffset, TileFlags.None);
                 gridBones.SetTile(coordAfterOffset, generatedBonesSprites[currentBone].tilesInOrder[generatedBones[currentBone].Count - 1 - boneCoord]);
 
                 Debug.Log("Bone generated on: " + coordAfterOffset);
+            }
+
+            if (brokenBone)
+            {
+                for (int boneCoord = 0; boneCoord < generatedBones[currentBone].Count; boneCoord++)
+                {
+                    Vector3Int coordAfterOffset = generatedBones[currentBone][boneCoord] - new Vector3Int((gridSize.x / 2), (gridSize.y / 2), 0);
+                    gridBones.SetTileFlags(coordAfterOffset, TileFlags.None);
+                    gridBones.SetTile(coordAfterOffset, boneDust);
+
+                }
+                generatedBones.Remove(generatedBones[currentBone]);
+                generatedBonesSprites.Remove(generatedBonesSprites[currentBone]);
+
             }
         }
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 using static UnityEditor.PlayerSettings;
@@ -25,11 +26,13 @@ public class ClickOnTiles : MonoBehaviour
     int[,] bonesGrid;
     int[,] dirtGrid;
 
+    [SerializeField] private DisplayAffectedTiles displayScript;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -60,6 +63,8 @@ public class ClickOnTiles : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 worldPoint = ray.GetPoint(-ray.origin.z / ray.direction.z);
             Vector3Int position = tilemaps[0].WorldToCell(worldPoint);
+
+
 
             switch (currentTool)
             {
@@ -97,6 +102,7 @@ public class ClickOnTiles : MonoBehaviour
 
                     break;
                 case 3:
+                    Shovel(position);
                     addToValue = 0;
                     increment = 1;
 
@@ -132,17 +138,51 @@ public class ClickOnTiles : MonoBehaviour
                 //}
             }
 
-            
-            if(currentTilemap != null)
+
+            if (currentTilemap != null)
             {
                 TileBase tile = currentTilemap.GetTile(currentPos);
                 Debug.Log(currentPos);
                 //currentTilemap.SetTileFlags(currentPos, TileFlags.None);
                 currentTilemap.SetTile(currentPos, null);
             }
-            
+
         }
-        
+
+    }
+
+    private void Shovel(Vector3Int currentPos)
+    {
+        Debug.Log("x = " + dirtGrid.GetLength(0));
+        Debug.Log("y = " + dirtGrid.GetLength(1));
+        currentPos += new Vector3Int(dirtGrid.GetLength(0) / 2, dirtGrid.GetLength(1) / 2, 0);
+        for (int i = -displayScript.ShovelSize + 1; i < displayScript.ShovelSize; i++)
+        {
+            for (int j = -displayScript.ShovelSize + 1; j < displayScript.ShovelSize; j++)
+            {
+                Debug.Log("x = " + (currentPos.x + i) + " y = " + (currentPos.y + j));
+                if ((currentPos.x + i) >= 0 && (currentPos.x + i) < dirtGrid.GetLength(0) &&
+                    (currentPos.y + j) >= 0 && (currentPos.y + j) < dirtGrid.GetLength(1))
+                {
+                    if (i == 0 && j == 0)
+                    {
+                        dirtGrid[currentPos.x + i, currentPos.y + j] -= 3;
+                    }
+                    else if (i >= -1 && i <= 1 && j >= -1 && j <= 1)
+                    {
+                        dirtGrid[currentPos.x + i, currentPos.y + j] -= 2;
+                    }
+                    else
+                    {
+                        dirtGrid[currentPos.x + i, currentPos.y + j] -= 1;
+                    }
+                    
+                }
+
+            }
+        }
+
+        UpdateGridData();
     }
 
     public void ReceiveGridData(int[,] dirt, int[,] bones)

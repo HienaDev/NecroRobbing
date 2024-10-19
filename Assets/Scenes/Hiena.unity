@@ -557,6 +557,7 @@ MonoBehaviour:
     tilesInOrder:
     - {fileID: 11400000, guid: fc2b6bf360f8a7f40b97062825b5e0fe, type: 2}
   tilesGeneratorScript: {fileID: 1302464951}
+  displayScript: {fileID: 1635931579}
 --- !u!4 &772376258
 Transform:
   m_ObjectHideFlags: 0
@@ -621,6 +622,8 @@ MonoBehaviour:
   hardTile3: {fileID: 11400000, guid: 9fa2260347eecd84cab9eee283ab7598, type: 2}
   softTile2: {fileID: 11400000, guid: 6dd8d725c7bf7fd4292a4cb37fd2823a, type: 2}
   dirtTile1: {fileID: 11400000, guid: d78ce207498b9264ab2836b3284d15c8, type: 2}
+  badBrokenTile: {fileID: 11400000, guid: d699ead9ca1e52b4bad8edf0f781e706, type: 2}
+  boneDust: {fileID: 11400000, guid: d9d0b4913b67bae40a1265f13a99b4b9, type: 2}
   gridBones: {fileID: 759897447}
   numberOfBonesToGenerate: 10
   smallBones:
@@ -1135,8 +1138,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayTilemap: {fileID: 1478002060}
-  blankTile: {fileID: 11400000, guid: 4212431078cb0da4b9914c021ef760f7, type: 2}
+  greenTile: {fileID: 11400000, guid: 4212431078cb0da4b9914c021ef760f7, type: 2}
+  yellowTile: {fileID: 11400000, guid: f640a5082c978fb4c9bbdbfd83aa4f9f, type: 2}
+  redTile: {fileID: 11400000, guid: 90a9135524bf0e440bfa7cffc19e92a7, type: 2}
   handTile: {fileID: 11400000, guid: fc2b6bf360f8a7f40b97062825b5e0fe, type: 2}
+  shovelSize: 3
 --- !u!1 &2039265186
 GameObject:
   m_ObjectHideFlags: 0
