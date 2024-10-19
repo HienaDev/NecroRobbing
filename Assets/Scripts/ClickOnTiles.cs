@@ -89,14 +89,18 @@ public class ClickOnTiles : MonoBehaviour
         UpdateGridData();
     }
 
-    private void Hand(Vector3Int currentPos) 
+    private void Hand(Vector3Int currentPos)
     {
         Debug.Log("x = " + dirtGrid.GetLength(0));
         Debug.Log("y = " + dirtGrid.GetLength(1));
         currentPos += new Vector3Int(dirtGrid.GetLength(0) / 2, dirtGrid.GetLength(1) / 2, 0);
 
-        if(dirtGrid[currentPos.x, currentPos.y] <= 0)
-            dirtGrid[currentPos.x, currentPos.y] = 50;
+        Debug.Log(currentPos);
+
+        if ((currentPos.x) >= 0 && (currentPos.x) < dirtGrid.GetLength(0) &&
+                    (currentPos.y) >= 0 && (currentPos.y) < dirtGrid.GetLength(1))
+            if (dirtGrid[currentPos.x, currentPos.y] <= 0)
+                dirtGrid[currentPos.x, currentPos.y] = 50;
 
         UpdateGridData();
     }
@@ -107,8 +111,10 @@ public class ClickOnTiles : MonoBehaviour
         Debug.Log("y = " + dirtGrid.GetLength(1));
         currentPos += new Vector3Int(dirtGrid.GetLength(0) / 2, dirtGrid.GetLength(1) / 2, 0);
 
-        if (dirtGrid[currentPos.x, currentPos.y] == 1)
-            dirtGrid[currentPos.x, currentPos.y] -= 1;
+        if ((currentPos.x) >= 0 && (currentPos.x) < dirtGrid.GetLength(0) &&
+                    (currentPos.y) >= 0 && (currentPos.y) < dirtGrid.GetLength(1))
+            if (dirtGrid[currentPos.x, currentPos.y] == 1)
+                dirtGrid[currentPos.x, currentPos.y] -= 1;
 
         UpdateGridData();
     }
