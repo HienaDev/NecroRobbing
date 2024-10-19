@@ -327,10 +327,10 @@ TextureImporter:
       name: Torax_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 96
+        x: 19
+        y: 8
+        width: 58
+        height: 81
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

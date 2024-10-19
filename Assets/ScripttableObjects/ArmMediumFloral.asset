@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00c6405a88e78594a922e48257ea998f, type: 3}
-  m_Name: Bone3
+  m_Name: ArmMediumFloral
   m_EditorClassIdentifier: 
-  boneType: 3
-  boneSize: 1
-  powerLevel: 1
-  boneSprite: {fileID: 1695463608, guid: 0610edd506448774f94562cc0da91cf3, type: 3}
+  boneType: 0
+  boneSize: 0
+  powerLevel: 0
+  boneSprite: {fileID: 603469238, guid: 4ce2141b50cc01640be821a169c6d046, type: 3}

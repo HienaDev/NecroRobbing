@@ -88,3 +88,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6504efb900cca4e4db60c5b880080a8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropType: 0
+  displaceObj: 100

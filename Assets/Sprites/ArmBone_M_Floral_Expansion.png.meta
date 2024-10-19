@@ -134,7 +134,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -156,7 +156,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -178,7 +178,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -200,7 +200,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -209,6 +209,28 @@ TextureImporter:
       bones: []
       spriteID: a8f7d0c6adbd00f41b8dd7ed19564154
       internalID: 155563172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmBone_M_Floral_Expansion_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 80
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ab81b515daa0747932185e023a6d88
+      internalID: 603469238
       vertices: []
       indices: 
       edges: []
@@ -231,6 +253,7 @@ TextureImporter:
       ArmBone_M_Floral_Expansion_1: 939164265
       ArmBone_M_Floral_Expansion_2: 1518003808
       ArmBone_M_Floral_Expansion_3: 155563172
+      ArmBone_M_Floral_Expansion_4: 603469238
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

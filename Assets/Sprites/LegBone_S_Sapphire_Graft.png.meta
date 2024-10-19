@@ -134,7 +134,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -156,7 +156,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -178,7 +178,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -187,6 +187,28 @@ TextureImporter:
       bones: []
       spriteID: 46b74304a191db541ae8939d8baaa4ce
       internalID: -1954658541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LegBone_S_Sapphire_Graft_3
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 5
+        width: 17
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43ae904a32fe7545bcf04105c48450e
+      internalID: -2002949488
       vertices: []
       indices: 
       edges: []
@@ -208,6 +230,7 @@ TextureImporter:
       LegBone_S_Sapphire_Graft_0: -7634386062467456382
       LegBone_S_Sapphire_Graft_1: -1084580147
       LegBone_S_Sapphire_Graft_2: -1954658541
+      LegBone_S_Sapphire_Graft_3: -2002949488
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

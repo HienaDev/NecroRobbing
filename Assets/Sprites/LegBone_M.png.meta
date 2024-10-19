@@ -217,10 +217,10 @@ TextureImporter:
       name: LegBone_M_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 96
+        x: 14
+        y: 2
+        width: 39
+        height: 90
       alignment: 9
       pivot: {x: 0.75, y: 0.85}
       border: {x: 0, y: 0, z: 0, w: 0}

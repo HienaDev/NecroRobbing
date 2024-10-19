@@ -1571,6 +1571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone Summon
       objectReference: {fileID: 0}
+    - target: {fileID: 6783906301986946139, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
+      propertyPath: displaceObj
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -16,10 +16,9 @@ public class BoneSetup : MonoBehaviour
     {
         image = GetComponent<Image>();
         rectTrans = GetComponent<RectTransform>();
-        image.SetNativeSize();
-        Vector3 curScale = rectTrans.localScale;
-        rectTrans.localScale = new Vector3(curScale.x*4,curScale.y*4,1f);
         image.sprite = boneBase.BoneSprite;
+        Vector3 curScale = image.sprite.rect.size;
+        rectTrans.sizeDelta = new Vector3(curScale.x*4f,curScale.y*4f,1f);
         boneType = boneBase.BoneType;
         boneSize = boneBase.BoneSize;
         bonePower = boneBase.PowerLevel;
