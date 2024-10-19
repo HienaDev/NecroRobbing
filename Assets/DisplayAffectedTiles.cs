@@ -8,6 +8,7 @@ public class DisplayAffectedTiles : MonoBehaviour
     [SerializeField] private Tilemap displayTilemap;
     [SerializeField] private Tile blankTile;
     private List<Vector3Int> changedTiles = new List<Vector3Int>();
+    [SerializeField] private Tile handTile;
 
     private Vector3Int currentPosition = new Vector3Int(20, 20, 0);
 
@@ -19,22 +20,36 @@ public class DisplayAffectedTiles : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            currentTool = 0;    
+            currentTool = 0;
+            currentPosition = new Vector3Int(20, 20, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             currentTool = 1;
+            currentPosition = new Vector3Int(20, 20, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             currentTool = 2;
+            currentPosition = new Vector3Int(20, 20, 0);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            currentTool = 3;
+            currentPosition = new Vector3Int(20, 20, 0);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+ 
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Vector3 worldPoint = ray.GetPoint(-ray.origin.z / ray.direction.z);
@@ -57,10 +72,15 @@ public class DisplayAffectedTiles : MonoBehaviour
             {
                 case 0:
                     displayTilemap.SetTileFlags(currentPosition, TileFlags.None);
-                    displayTilemap.SetTile(currentPosition, blankTile);
+                    displayTilemap.SetTile(currentPosition, handTile);
                     changedTiles.Add(currentPosition);
                     break;
                 case 1:
+                    displayTilemap.SetTileFlags(currentPosition, TileFlags.None);
+                    displayTilemap.SetTile(currentPosition, blankTile);
+                    changedTiles.Add(currentPosition);
+                    break;
+                case 2:
                     int addToValue = 0;
                     int increment = 1;
 
@@ -82,7 +102,7 @@ public class DisplayAffectedTiles : MonoBehaviour
                     }
                     
                     break;
-                case 2:
+                case 3:
                     addToValue = 0;
                     increment = 1;
 

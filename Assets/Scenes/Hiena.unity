@@ -543,6 +543,20 @@ MonoBehaviour:
   tilemaps:
   - {fileID: 1588745934}
   - {fileID: 759897447}
+  tools:
+  - toolConfig:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 0, y: 0, z: 0}
+    tilesInOrder:
+    - {fileID: 11400000, guid: fc2b6bf360f8a7f40b97062825b5e0fe, type: 2}
+  - toolConfig:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 0, y: 0, z: 0}
+    tilesInOrder:
+    - {fileID: 11400000, guid: fc2b6bf360f8a7f40b97062825b5e0fe, type: 2}
+  tilesGeneratorScript: {fileID: 1302464951}
 --- !u!4 &772376258
 Transform:
   m_ObjectHideFlags: 0
@@ -602,7 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5e911023577b846a6254d7a5d6d37a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 10, y: 10}
+  gridSize: {x: 24, y: 14}
   gridDirt: {fileID: 1588745934}
   hardTile3: {fileID: 11400000, guid: 9fa2260347eecd84cab9eee283ab7598, type: 2}
   softTile2: {fileID: 11400000, guid: 6dd8d725c7bf7fd4292a4cb37fd2823a, type: 2}
@@ -658,6 +672,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3c6c9899d9446cc4f9ac683b2515a908, type: 2}
     - {fileID: 11400000, guid: ad1ccf6305d892f4ebdb6b94166cd3ec, type: 2}
     - {fileID: 11400000, guid: 3d7a0f501427d3b499255cf431027418, type: 2}
+  clickOnTileScript: {fileID: 772376257}
 --- !u!1 &1320922334
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,7 +921,7 @@ Tilemap:
     m_Data: {r: 5.4557936e-29, g: 5.4557936e-29, b: 5.4557936e-29, a: 5.4557936e-29}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0, g: 1, b: 0.034029007, a: 0.29803923}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -5, y: -5, z: 0}
   m_Size: {x: 10, y: 10, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -1120,7 +1135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayTilemap: {fileID: 1478002060}
-  blankTile: {fileID: 11400000, guid: 8bcd0825b8b48d54da91e5e300e569fb, type: 2}
+  blankTile: {fileID: 11400000, guid: 4212431078cb0da4b9914c021ef760f7, type: 2}
+  handTile: {fileID: 11400000, guid: fc2b6bf360f8a7f40b97062825b5e0fe, type: 2}
 --- !u!1 &2039265186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1199,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 160
+  orthographic size: 224
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

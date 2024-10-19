@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f710f9511dc64f84685ef6b75f22d6eb
+guid: a897e0f389ac0f64bbe8cdc6e6216988
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4937275613193389403
-    second: white_tile_0
+      213: 5196598665430862371
+    second: red_tile_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: white_tile_0
+      name: red_tile_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5aab8651df54b7bb0800000000000000
-      internalID: -4937275613193389403
+      spriteID: 32a864514f60e1840800000000000000
+      internalID: 5196598665430862371
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      white_tile_0: -4937275613193389403
+      red_tile_0: 5196598665430862371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
