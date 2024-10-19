@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine.XR;
@@ -15,40 +16,60 @@ public class DisplayAffectedTiles : MonoBehaviour
 
     private Vector3Int currentPosition = new Vector3Int(20, 20, 0);
 
-    private int currentTool = 0;
+    private int currentTool = 3;
 
     [SerializeField] private int shovelSize = 3;
     public int ShovelSize { get { return shovelSize; } }
 
+    [SerializeField] private GameObject shovel; 
+    [SerializeField] private GameObject spell;
+    [SerializeField] private GameObject brush;
+    [SerializeField] private GameObject hand;
+    private GameObject currentCursor;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        Cursor.visible = false;
+        currentCursor = hand;
     }
 
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            currentTool = 0;
-            currentPosition = new Vector3Int(20, 20, 0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            currentTool = 1;
+            currentTool = 3;
+            currentCursor.SetActive(false);
+            currentCursor = hand;
+            hand.SetActive(true);
             currentPosition = new Vector3Int(20, 20, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             currentTool = 2;
+            currentCursor.SetActive(false);
+            currentCursor = brush;
+            brush.SetActive(true);
             currentPosition = new Vector3Int(20, 20, 0);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            currentTool = 3;
+            currentTool = 1;
+            currentCursor.SetActive(false);
+            currentCursor = spell;
+            spell.SetActive(true);
+            currentPosition = new Vector3Int(20, 20, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            currentTool = 0;
+            currentCursor.SetActive(false);
+            currentCursor = shovel;
+            shovel.SetActive(true);
             currentPosition = new Vector3Int(20, 20, 0);
         }
     }
@@ -77,16 +98,16 @@ public class DisplayAffectedTiles : MonoBehaviour
             switch(currentTool)
             {
                 case 0:
-                    Hand(currentPosition);
+                    Shovel(currentPosition);
                     break;
                 case 1:
-                    Brush(currentPosition);
-                    break;
-                case 2:
                     Spell(currentPosition);
                     break;
+                case 2:
+                    Brush(currentPosition);
+                    break;
                 case 3:
-                    Shovel(currentPosition);
+                    Hand(currentPosition);
                     break;
                 default:
                     break;

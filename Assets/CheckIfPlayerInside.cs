@@ -4,6 +4,7 @@ public class CheckIfPlayerInside : MonoBehaviour
 {
 
     public bool PlayerInside {  get; private set; }
+    [SerializeField] private GameObject interactKey;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +23,7 @@ public class CheckIfPlayerInside : MonoBehaviour
         if(collision.gameObject.GetComponentInParent<TAG_Player>() != null)
         {
             PlayerInside = true;
+            interactKey.SetActive(true);
         }
     }
 
@@ -30,6 +32,7 @@ public class CheckIfPlayerInside : MonoBehaviour
         if (collision.gameObject.GetComponentInParent<TAG_Player>() != null)
         {
             PlayerInside = false;
+            interactKey.SetActive(false);
         }
     }
 }

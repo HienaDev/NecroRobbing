@@ -15,6 +15,8 @@ public class TilesGenerator : MonoBehaviour
 
     [SerializeField] private Vector2Int gridSize;
 
+    [Header("Inventory"), SerializeField] private BoneInventory boneInventoryScript;
+
     [Header("UI"), SerializeField] private GameObject[] UIInventory;
     private int currentInventorySlot = 0;
 
@@ -47,6 +49,19 @@ public class TilesGenerator : MonoBehaviour
     void Start()
     {
 
+        
+    }
+
+    private void OnEnable()
+    {
+
+        foreach(GameObject slot in UIInventory)
+        {
+            slot.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+        }
+
+        currentInventorySlot = 0;
+
         for (int x = -gridSize.x / 2 - 2; x < gridSize.x / 2 + 2; x++)
         {
             for (int y = -gridSize.y / 2 - 2; y < gridSize.y / 2 + 2; y++)
@@ -64,7 +79,7 @@ public class TilesGenerator : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            GenerateGame();
+            //GenerateGame();
         }
     }
 
@@ -392,7 +407,9 @@ public class TilesGenerator : MonoBehaviour
         {
             Debug.Log(currentBone);
             boneInventory.Add(generatedBonesSprites[currentBone].boneBase);
+            boneInventoryScript.AddToInventory(generatedBonesSprites[currentBone].boneBase);
             UIInventory[currentInventorySlot].GetComponent<Image>().sprite = generatedBonesSprites[currentBone].boneBase.BoneSprite;
+            UIInventory[currentInventorySlot].GetComponent<Image>().color = Color.white;
             currentInventorySlot++;
             generatedBones.Remove(generatedBones[currentBone]);
             generatedBonesSprites.Remove(generatedBonesSprites[currentBone]);

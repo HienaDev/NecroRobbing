@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 98a5099284972e94c84c4aaf99d604f5
+guid: cab5f457bef3ffe4e8db4a9f590a62ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6787700423050927991
-    second: ShittyHand_0
+      213: -3021494556208450697
+    second: Brush_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ShittyHand_0
+      name: Brush_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 7
-        width: 13
-        height: 18
+        x: 4
+        y: 4
+        width: 23
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 980e7429d6e3dc1a0800000000000000
-      internalID: -6787700423050927991
+      spriteID: 7733b6ea5be7116d0800000000000000
+      internalID: -3021494556208450697
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ShittyHand_0: -6787700423050927991
+      Brush_0: -3021494556208450697
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

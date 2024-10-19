@@ -1,12 +1,15 @@
 using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class GraveManager : MonoBehaviour
 {
     [SerializeField] private GameObject graveSelection;
     [SerializeField] private GameObject graveDigging;
     private CheckIfPlayerInside checkPlayerScript;
+
+    [SerializeField] private GraveCountChecker graveCounter;
 
     private SpriteRenderer[] renderers;
 
@@ -30,6 +33,8 @@ public class GraveManager : MonoBehaviour
             {
                 graveSelection.SetActive(false);
                 graveDigging.SetActive(true);
+                graveCounter.IncreaseGraveCount();
+                gameObject.GetComponent<GraveManager>().enabled = false;
             }
                 
         }
