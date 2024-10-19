@@ -9,6 +9,7 @@ public class TilesGenerator : MonoBehaviour
     {
         public Vector3[] boneConfig;
         public Tile[] tilesInOrder;
+        public BoneBase boneBase;
     }
 
     [SerializeField] private Vector2Int gridSize;
@@ -30,7 +31,7 @@ public class TilesGenerator : MonoBehaviour
     private List<List<Vector3Int>> generatedBones = new List<List<Vector3Int>>();
     private List<Bone> generatedBonesSprites = new List<Bone>();
 
-    //private List<BoneBase>
+    private List<BoneBase> boneInventory = new List<BoneBase>();
 
     [Header("GRID"), SerializeField] private ClickOnTiles clickOnTileScript;
 
@@ -241,6 +242,23 @@ public class TilesGenerator : MonoBehaviour
             {
                 switch (gridDirtNumbers[x, y])
                 {
+                    case 50:
+                        bool boneExposed = CheckIfBoneExposed(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
+                                                        y - (gridSize.y / 2 - gridSize.y % 2)
+                                                        , 0));
+
+                        if(boneExposed)
+                        {
+                            Debug.Log("bone added");
+                            foreach(BoneBase bone in boneInventory)
+                            {
+                                Debug.Log(bone.BoneType);
+                            }
+                        }
+
+                        gridDirtNumbers[x, y] = 0;
+
+                        break;
                     case 3:
                         gridDirt.SetTile(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
                                                         y - (gridSize.y / 2 - gridSize.y % 2)
@@ -316,5 +334,42 @@ public class TilesGenerator : MonoBehaviour
 
 
 
+    }
+
+    private bool CheckIfBoneExposed(Vector3Int bonePosition)
+    {
+        int currentBone = 800;
+        
+        for (int bone = 0; bone <= generatedBones.Count; bone++)
+        {
+            foreach (Vector3Int x in generatedBones[bone])
+            {
+                if(x == bonePosition)
+                {
+                    currentBone = bone; break;
+                }
+            }
+        }
+
+        bool exposed = true;
+        foreach (Vector3Int x in generatedBones[currentBone])
+        {
+            if (gridDirt.GetTile(x) != null)
+            {
+                exposed = false;
+            }
+        }
+
+        if (currentBone == 800 || exposed == false)
+            return false;
+        else
+        {
+
+            boneInventory.Add(generatedBonesSprites[currentBone].boneBase);
+            generatedBones.Remove(generatedBones[currentBone]);
+            generatedBonesSprites.Remove(generatedBonesSprites[currentBone]);
+            return true;
+        }
+ 
     }
 }

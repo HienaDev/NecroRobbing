@@ -95,7 +95,8 @@ public class ClickOnTiles : MonoBehaviour
         Debug.Log("y = " + dirtGrid.GetLength(1));
         currentPos += new Vector3Int(dirtGrid.GetLength(0) / 2, dirtGrid.GetLength(1) / 2, 0);
 
-        dirtGrid[currentPos.x, currentPos.y] = 50;
+        if(dirtGrid[currentPos.x, currentPos.y] <= 0)
+            dirtGrid[currentPos.x, currentPos.y] = 50;
 
         UpdateGridData();
     }
