@@ -200,7 +200,7 @@ TextureImporter:
         width: 0
         height: 0
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,11 +213,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: LegBone_S_Enternal_Spiral_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 32
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474816bc60e1a6b4bab3e71ee208733d
+      internalID: -1160209357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LegBone_S_Enternal_Spiral_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ec0450dcafdf74e92f6bb87896da9d
+      internalID: -538597586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6f8175156e0d0204787198856d90c9e3
     internalID: 0
     vertices: []
     indices: 
@@ -231,6 +275,8 @@ TextureImporter:
       LegBone_S_Enternal_Spiral_1: -4338510752638337180
       LegBone_S_Enternal_Spiral_2: 5402091496599650288
       LegBone_S_Enternal_Spiral_3: -4637480564789163184
+      LegBone_S_Enternal_Spiral_4: -1160209357
+      LegBone_S_Enternal_Spiral_5: -538597586
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

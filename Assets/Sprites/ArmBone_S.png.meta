@@ -200,7 +200,7 @@ TextureImporter:
         width: 0
         height: 0
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,11 +213,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ArmBone_S_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32cd2ebffdbabe4c80a0ae4d5c6c9ed
+      internalID: 685474407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c58605eb5a8d62b49be48ada2efd6d65
     internalID: 0
     vertices: []
     indices: 
@@ -231,6 +253,7 @@ TextureImporter:
       ArmBone_S_1: 7086739201666352817
       ArmBone_S_2: -5023805487831125837
       ArmBone_S_3: 4566733156750482000
+      ArmBone_S_4: 685474407
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

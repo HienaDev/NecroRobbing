@@ -222,7 +222,7 @@ TextureImporter:
         width: 0
         height: 0
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -235,11 +235,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: LegBone_M_Parasitic_Marrow_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054f2f96621b79a4abe6c56d6a840960
+      internalID: -1565703022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 65c5341a2f5874d4399343984b7176ce
     internalID: 0
     vertices: []
     indices: 
@@ -254,6 +276,7 @@ TextureImporter:
       LegBone_M_Parasitic_Marrow_2: -9148765780453669779
       LegBone_M_Parasitic_Marrow_3: 8549162161551635179
       LegBone_M_Parasitic_Marrow_4: -5416105956743089181
+      LegBone_M_Parasitic_Marrow_5: -1565703022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

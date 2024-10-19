@@ -222,7 +222,7 @@ TextureImporter:
         width: 0
         height: 0
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -235,11 +235,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: LegBone_M_Meat_Crusher_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa30eb2c9dbc2f44aba18bb8d500df0d
+      internalID: -408339083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7ffff617ce9ef26408d1e51d6b054f3c
     internalID: 0
     vertices: []
     indices: 
@@ -254,6 +276,7 @@ TextureImporter:
       LegBone_M_Meat_Crusher_2: -146359612838373078
       LegBone_M_Meat_Crusher_3: -812422809068384321
       LegBone_M_Meat_Crusher_4: -2206955724998648651
+      LegBone_M_Meat_Crusher_5: -408339083
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

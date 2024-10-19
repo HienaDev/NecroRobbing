@@ -178,7 +178,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,11 +191,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Torax_Small_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588e69a062e1e9746bbb0f6ffc2aa792
+      internalID: -513375514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 683e4a5695d1d8f4ca3d2fa2f07816c6
     internalID: 0
     vertices: []
     indices: 
@@ -208,6 +230,7 @@ TextureImporter:
       Torax_Small_0: -3960699950732722884
       Torax_Small_1: 5332059847732643193
       Torax_Small_2: -8882340788546579163
+      Torax_Small_3: -513375514
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
