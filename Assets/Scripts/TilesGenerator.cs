@@ -30,6 +30,7 @@ public class TilesGenerator : MonoBehaviour
     private List<List<Vector3Int>> generatedBones = new List<List<Vector3Int>>();
     private List<Bone> generatedBonesSprites = new List<Bone>();
 
+    //private List<BoneBase>
 
     [Header("GRID"), SerializeField] private ClickOnTiles clickOnTileScript;
 

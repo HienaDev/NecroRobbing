@@ -69,86 +69,78 @@ public class ClickOnTiles : MonoBehaviour
             switch (currentTool)
             {
                 case 0:
-                    //displayTilemap.SetTileFlags(currentPosition, TileFlags.None);
-                    //displayTilemap.SetTile(currentPosition, blankTile);
-                    //displayTilemap.SetColor(currentPosition, Color.red);
-                    //changedTiles.Add(currentPosition);
+                    Hand(position);
                     break;
                 case 1:
-                    //displayTilemap.SetTileFlags(currentPosition, TileFlags.None);
-                    //displayTilemap.SetTile(currentPosition, blankTile);
-                    //changedTiles.Add(currentPosition);
+                    Brush(position);
                     break;
                 case 2:
-                    int addToValue = 0;
-                    int increment = 1;
-
-                    for (int i = -1; i < 2; i++)
-                    {
-                        for (int j = -addToValue; j < addToValue + 1; j++)
-                        {
-                            //Vector3Int currentPositionWithOffset = currentPosition + new Vector3Int(i, j, 0);
-                            //displayTilemap.SetTileFlags(currentPositionWithOffset, TileFlags.None);
-                            //displayTilemap.SetTile(currentPositionWithOffset, blankTile);
-                            //changedTiles.Add(currentPositionWithOffset);
-                        }
-                        if (i == 0)
-                            increment *= -1;
-
-                        addToValue += increment;
-
-
-                    }
-
+                    Spell(position);
                     break;
                 case 3:
                     Shovel(position);
-                    addToValue = 0;
-                    increment = 1;
-
-                    for (int i = -2; i < 3; i++)
-                    {
-                        for (int j = -addToValue; j < addToValue + 1; j++)
-                        {
-                            //Vector3Int currentPositionWithOffset = currentPosition + new Vector3Int(i, j, 0);
-                            //displayTilemap.SetTileFlags(currentPositionWithOffset, TileFlags.None);
-                            //displayTilemap.SetTile(currentPositionWithOffset, blankTile);
-                            //changedTiles.Add(currentPositionWithOffset);
-                        }
-                        if (i == 0)
-                            increment *= -1;
-
-                        addToValue += increment;
-
-
-                    }
                     break;
                 default:
                     break;
             }
 
-            for (int i = 0; i < tilemaps.Length; i++)
-            {
-                //Vector3Int position = tilemaps[i].WorldToCell(worldPoint);
-                //if (tilemaps[i].GetTile(position) != null)
-                //{
-                //    currentPos = position;
-                //    currentTilemap = tilemaps[i];
-                //    break;
-                //}
-            }
-
-
-            if (currentTilemap != null)
-            {
-                TileBase tile = currentTilemap.GetTile(currentPos);
-                Debug.Log(currentPos);
-                //currentTilemap.SetTileFlags(currentPos, TileFlags.None);
-                currentTilemap.SetTile(currentPos, null);
-            }
-
         }
 
+        UpdateGridData();
+    }
+
+    private void Hand(Vector3Int currentPos) 
+    {
+        Debug.Log("x = " + dirtGrid.GetLength(0));
+        Debug.Log("y = " + dirtGrid.GetLength(1));
+        currentPos += new Vector3Int(dirtGrid.GetLength(0) / 2, dirtGrid.GetLength(1) / 2, 0);
+
+        dirtGrid[currentPos.x, currentPos.y] = 50;
+
+        UpdateGridData();
+    }
+
+    private void Brush(Vector3Int currentPos)
+    {
+        Debug.Log("x = " + dirtGrid.GetLength(0));
+        Debug.Log("y = " + dirtGrid.GetLength(1));
+        currentPos += new Vector3Int(dirtGrid.GetLength(0) / 2, dirtGrid.GetLength(1) / 2, 0);
+
+        if (dirtGrid[currentPos.x, currentPos.y] == 1)
+            dirtGrid[currentPos.x, currentPos.y] -= 1;
+
+        UpdateGridData();
+    }
+
+    private void Spell(Vector3Int currentPos)
+    {
+        int addToValue = 0;
+        int increment = 1;
+        currentPos += new Vector3Int(dirtGrid.GetLength(0) / 2, dirtGrid.GetLength(1) / 2, 0);
+        for (int i = -1; i < 2; i++)
+        {
+            for (int j = -addToValue; j < addToValue + 1; j++)
+            {
+                if ((currentPos.x + i) >= 0 && (currentPos.x + i) < dirtGrid.GetLength(0) &&
+                    (currentPos.y + j) >= 0 && (currentPos.y + j) < dirtGrid.GetLength(1))
+                {
+                    if (i == 0 && j == 0)
+                    {
+                        dirtGrid[currentPos.x + i, currentPos.y + j] -= 1;
+                    }
+                    else
+                    {
+                        dirtGrid[currentPos.x + i, currentPos.y + j] -= 2;
+                    }
+                }
+            }
+            if (i == 0)
+                increment *= -1;
+
+            addToValue += increment;
+
+
+        }
     }
 
     private void Shovel(Vector3Int currentPos)
@@ -176,7 +168,7 @@ public class ClickOnTiles : MonoBehaviour
                     {
                         dirtGrid[currentPos.x + i, currentPos.y + j] -= 1;
                     }
-                    
+
                 }
 
             }
