@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: LegBone_S_Enternal_Spiral_2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -134445437, guid: 7c5e25fb86e25734d9615d3793d4877b, type: 3}
+  m_Sprite: {fileID: 5402091496599650288, guid: 7c5e25fb86e25734d9615d3793d4877b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
