@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 98a724c13b65bc047bf534d5a0c53e8d
+guid: ed27ddbaed995604393cbee6aa180b06
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7921043694037788994
-    second: dirt_sheet_0
+      213: 6919522163978163967
+    second: GimmeHeadS2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,12 +126,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dirt_sheet_0
+      name: GimmeHeadS2_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 32
+        width: 28
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -141,74 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eb6978e4abcc21290800000000000000
-      internalID: -7921043694037788994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirt_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 591e4bb38035cd144bb1cbee33bfef1d
-      internalID: -103581170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirt_sheet_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98a26399c1769f74a8baabdcf0dbe5c5
-      internalID: -469439908
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirt_sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7f6525b71b6b15459855abfccf21e3b
-      internalID: -1704218418
+      spriteID: ff65c573fb4170060800000000000000
+      internalID: 6919522163978163967
       vertices: []
       indices: 
       edges: []
@@ -217,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3869ad9af5ddf70418584daf5805b6ff
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -227,10 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dirt_sheet_0: -7921043694037788994
-      dirt_sheet_1: -103581170
-      dirt_sheet_2: -469439908
-      dirt_sheet_3: -1704218418
+      GimmeHeadS2_0: 6919522163978163967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

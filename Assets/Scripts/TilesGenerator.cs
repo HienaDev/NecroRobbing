@@ -56,8 +56,8 @@ public class TilesGenerator : MonoBehaviour
     private void GenerateGame()
     {
         GenerateBones();
-        //GenerateGrid();
-        //GenerateTiles();
+        GenerateGrid();
+        GenerateTiles();
     }
 
     private void GenerateBones()
@@ -92,7 +92,7 @@ public class TilesGenerator : MonoBehaviour
                 {
                     if (smallBones[numberOfBone].boneConfig[currentVector].x == 1)
                     {
-                        if((x > 9 || x < 0) || (y + currentVector > 9 || y + currentVector < 0))
+                        if((x > gridSize.x - 1 || x < 0) || (y + currentVector > gridSize.y - 1 || y + currentVector < 0))
                         {
                             Debug.Log("bad bone because out of grid");
                             goodBone = false;
@@ -115,7 +115,7 @@ public class TilesGenerator : MonoBehaviour
 
                     if (smallBones[numberOfBone].boneConfig[currentVector].y == 1)
                     {
-                        if ((x + 1 > 9 || x + 1 < 0) || (y + currentVector > 9 || y + currentVector < 0))
+                        if ((x + 1 > gridSize.x - 1 || x + 1 < 0) || (y + currentVector > gridSize.y - 1 || y + currentVector < 0))
                         {
                             Debug.Log("bad bone because out of grid");
                             goodBone = false;
@@ -138,7 +138,7 @@ public class TilesGenerator : MonoBehaviour
 
                     if (smallBones[numberOfBone].boneConfig[currentVector].z == 1)
                     {
-                        if ((x + 2 > 9 || x + 2 < 0) || (y + currentVector > 9 || y + currentVector < 0))
+                        if ((x + 2 > gridSize.x - 1 || x + 2 < 0) || (y + currentVector > gridSize.y - 1 || y + currentVector < 0))
                         {
                             Debug.Log("bad bone because out of grid");
                             goodBone = false;
@@ -174,7 +174,7 @@ public class TilesGenerator : MonoBehaviour
                     
                     for (int boneCoord = 0; boneCoord < changedTiles.Count; boneCoord++)
                     {
-                        Vector3Int coordAfterOffset = changedTiles[boneCoord] - new Vector3Int((gridSize.x / 2) - (gridSize.x % 2), (gridSize.x / 2) - (gridSize.x % 2), 0);
+                        Vector3Int coordAfterOffset = changedTiles[boneCoord] - new Vector3Int((gridSize.x / 2), (gridSize.y / 2), 0);
                         gridBones.SetTileFlags(coordAfterOffset, TileFlags.None);
                         gridBones.SetTile(coordAfterOffset, smallBones[numberOfBone].tilesInOrder[changedTiles.Count - 1 - boneCoord]);
                         gridBones.SetColor(coordAfterOffset, tileColor);
