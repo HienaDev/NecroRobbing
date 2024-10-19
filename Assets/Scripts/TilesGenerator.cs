@@ -34,6 +34,7 @@ public class TilesGenerator : MonoBehaviour
     private List<Bone> generatedBonesSprites = new List<Bone>();
 
     private List<BoneBase> boneInventory = new List<BoneBase>();
+    public List<BoneBase> BoneInventory => boneInventory;
 
     [Header("GRID"), SerializeField] private ClickOnTiles clickOnTileScript;
     [SerializeField] private Image UIInventory;
