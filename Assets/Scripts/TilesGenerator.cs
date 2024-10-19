@@ -15,6 +15,9 @@ public class TilesGenerator : MonoBehaviour
 
     [SerializeField] private Vector2Int gridSize;
 
+    [Header("UI"), SerializeField] private GameObject[] UIInventory;
+    private int currentInventorySlot = 0;
+
     [Header("Grave"), SerializeField] private Tilemap gridDirt;
     [SerializeField] private Tile hardTile3;
     [SerializeField] private Tile softTile2;
@@ -37,8 +40,8 @@ public class TilesGenerator : MonoBehaviour
     public List<BoneBase> BoneInventory => boneInventory;
 
     [Header("GRID"), SerializeField] private ClickOnTiles clickOnTileScript;
-    [SerializeField] private Image UIInventory;
-
+    
+    //ola
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -389,7 +392,8 @@ public class TilesGenerator : MonoBehaviour
         {
             Debug.Log(currentBone);
             boneInventory.Add(generatedBonesSprites[currentBone].boneBase);
-            UIInventory.sprite = generatedBonesSprites[currentBone].boneBase.BoneSprite;
+            UIInventory[currentInventorySlot].GetComponent<Image>().sprite = generatedBonesSprites[currentBone].boneBase.BoneSprite;
+            currentInventorySlot++;
             generatedBones.Remove(generatedBones[currentBone]);
             generatedBonesSprites.Remove(generatedBonesSprites[currentBone]);
             return true;
