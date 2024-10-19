@@ -1705,7 +1705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1192214162
 Transform:
   m_ObjectHideFlags: 0
@@ -1744,7 +1744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1204423706
 Transform:
   m_ObjectHideFlags: 0
@@ -1841,16 +1841,18 @@ MonoBehaviour:
     - {x: 1, y: 1, z: 0}
     - {x: 0, y: 1, z: 0}
     tilesInOrder:
-    - {fileID: 11400000, guid: 38a5c2cb77b2e114498c3260d71e2353, type: 2}
-    - {fileID: 11400000, guid: 0869fba45ab82bd4e94e42c11d5e7487, type: 2}
-    - {fileID: 11400000, guid: 2b0a57f2d7ef28a43bb2b18fc7a22d42, type: 2}
+    - {fileID: 11400000, guid: 0df0cc465c50dd840bbd53c35176043b, type: 2}
+    - {fileID: 11400000, guid: e77d31783dfbdc94e9b3712956082320, type: 2}
+    - {fileID: 11400000, guid: 1b33063b6b93a8543a5b90336575f4e6, type: 2}
     boneBase: {fileID: 11400000, guid: a296714d799b0aa40990849017fbdc8a, type: 2}
   - boneConfig:
-    - {x: 1, y: 1, z: 1}
+    - {x: 1, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
     tilesInOrder:
-    - {fileID: 11400000, guid: e428c746edfdd3b45ba8bc0c89557927, type: 2}
-    - {fileID: 11400000, guid: 7615c53af5c9b3a49af8d7273e955723, type: 2}
     - {fileID: 11400000, guid: 084f68aff34a29847a82eb6641428ff4, type: 2}
+    - {fileID: 11400000, guid: 7615c53af5c9b3a49af8d7273e955723, type: 2}
+    - {fileID: 11400000, guid: e428c746edfdd3b45ba8bc0c89557927, type: 2}
     boneBase: {fileID: 11400000, guid: fed3f15ae8fb3a44291911b18e67a1e2, type: 2}
   - boneConfig:
     - {x: 1, y: 0, z: 0}
@@ -1884,9 +1886,9 @@ MonoBehaviour:
     - {x: 1, y: 1, z: 0}
     - {x: 0, y: 1, z: 0}
     tilesInOrder:
-    - {fileID: 11400000, guid: 0df0cc465c50dd840bbd53c35176043b, type: 2}
-    - {fileID: 11400000, guid: e77d31783dfbdc94e9b3712956082320, type: 2}
-    - {fileID: 11400000, guid: 1b33063b6b93a8543a5b90336575f4e6, type: 2}
+    - {fileID: 11400000, guid: 38a5c2cb77b2e114498c3260d71e2353, type: 2}
+    - {fileID: 11400000, guid: 0869fba45ab82bd4e94e42c11d5e7487, type: 2}
+    - {fileID: 11400000, guid: 2b0a57f2d7ef28a43bb2b18fc7a22d42, type: 2}
     boneBase: {fileID: 11400000, guid: bcc2007989ca3134e8e8e4ebda24ff97, type: 2}
   mediumBones:
   - boneConfig:
@@ -1904,20 +1906,11 @@ MonoBehaviour:
     - {x: 0, y: 1, z: 0}
     - {x: 1, y: 1, z: 0}
     tilesInOrder:
-    - {fileID: 11400000, guid: 9cd61c2c901146542aed8a2c71a5e76b, type: 2}
-    - {fileID: 11400000, guid: 9830a6fb110e5ee4b9d1dd8b711be8c0, type: 2}
-    - {fileID: 11400000, guid: 7407b77a9e5be0a4bba92923fdd6912f, type: 2}
-    - {fileID: 11400000, guid: 251d17b7f7e3c88448e53a7ca0506a9b, type: 2}
+    - {fileID: 11400000, guid: fb72bd336046f314bb7c837309f6f7d8, type: 2}
+    - {fileID: 11400000, guid: 78baa6037bbfb9041a2ed9f5fbf46df0, type: 2}
+    - {fileID: 11400000, guid: a24b2f0c822c14e4eb5ee312fbc482e5, type: 2}
+    - {fileID: 11400000, guid: 7868fc09ab135a34eb31f4427a5c31f2, type: 2}
     boneBase: {fileID: 11400000, guid: 58ec32ea8adf86c4a8c0f215303b0db0, type: 2}
-  - boneConfig:
-    - {x: 1, y: 1, z: 0}
-    - {x: 0, y: 1, z: 1}
-    tilesInOrder:
-    - {fileID: 11400000, guid: 82d1f395c9f51b94aad0c5b89c73b9a4, type: 2}
-    - {fileID: 11400000, guid: d4d7f1beb0485b0498d6d06e5b95a9dc, type: 2}
-    - {fileID: 11400000, guid: bfbb116a259cb9540b3dc0518a1006f2, type: 2}
-    - {fileID: 11400000, guid: 2e07dd57f5a1ef0469aae3da07aadf1b, type: 2}
-    boneBase: {fileID: 11400000, guid: 44c1afb29283df5429f5122420d7d9f3, type: 2}
   - boneConfig:
     - {x: 1, y: 1, z: 0}
     - {x: 0, y: 1, z: 1}
@@ -1926,16 +1919,25 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 22dbcde486ae7954589f32254a9d3742, type: 2}
     - {fileID: 11400000, guid: dbd4f77ca10811948adbe74f9e7f238f, type: 2}
     - {fileID: 11400000, guid: ba8c3af54278dfe4cb3ac7fd5fe4d544, type: 2}
+    boneBase: {fileID: 11400000, guid: 44c1afb29283df5429f5122420d7d9f3, type: 2}
+  - boneConfig:
+    - {x: 1, y: 1, z: 0}
+    - {x: 0, y: 1, z: 1}
+    tilesInOrder:
+    - {fileID: 11400000, guid: 82d1f395c9f51b94aad0c5b89c73b9a4, type: 2}
+    - {fileID: 11400000, guid: d4d7f1beb0485b0498d6d06e5b95a9dc, type: 2}
+    - {fileID: 11400000, guid: bfbb116a259cb9540b3dc0518a1006f2, type: 2}
+    - {fileID: 11400000, guid: 2e07dd57f5a1ef0469aae3da07aadf1b, type: 2}
     boneBase: {fileID: 11400000, guid: 391071ae5c5a6d54aacb62748a1b52bf, type: 2}
   - boneConfig:
     - {x: 0, y: 1, z: 0}
     - {x: 0, y: 1, z: 0}
     - {x: 1, y: 1, z: 0}
     tilesInOrder:
-    - {fileID: 11400000, guid: fb72bd336046f314bb7c837309f6f7d8, type: 2}
-    - {fileID: 11400000, guid: 78baa6037bbfb9041a2ed9f5fbf46df0, type: 2}
-    - {fileID: 11400000, guid: a24b2f0c822c14e4eb5ee312fbc482e5, type: 2}
-    - {fileID: 11400000, guid: 7868fc09ab135a34eb31f4427a5c31f2, type: 2}
+    - {fileID: 11400000, guid: 9cd61c2c901146542aed8a2c71a5e76b, type: 2}
+    - {fileID: 11400000, guid: 9830a6fb110e5ee4b9d1dd8b711be8c0, type: 2}
+    - {fileID: 11400000, guid: 7407b77a9e5be0a4bba92923fdd6912f, type: 2}
+    - {fileID: 11400000, guid: 251d17b7f7e3c88448e53a7ca0506a9b, type: 2}
     boneBase: {fileID: 11400000, guid: 82be44d897072244dac55381a9f85ecf, type: 2}
   bigBones:
   - boneConfig:
@@ -2750,7 +2752,7 @@ Tilemap:
     m_Data: {r: 5.4557936e-29, g: 5.4557936e-29, b: 5.4557936e-29, a: 5.4557936e-29}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_Origin: {x: -5, y: -5, z: 0}
   m_Size: {x: 10, y: 10, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}

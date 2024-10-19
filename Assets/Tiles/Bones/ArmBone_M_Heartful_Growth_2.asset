@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: ArmBone_M_Heartful_Growth_2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1719400899, guid: 96d264c46b8c1d7479189d5c56df2bdf, type: 3}
+  m_Sprite: {fileID: -5706838649110167745, guid: 96d264c46b8c1d7479189d5c56df2bdf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

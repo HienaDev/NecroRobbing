@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: LegBone_M_Meat_Crusher_2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -1969463154, guid: 3c55b8f183bfbbb4c96ced61f729eebd, type: 3}
+  m_Sprite: {fileID: -146359612838373078, guid: 3c55b8f183bfbbb4c96ced61f729eebd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
