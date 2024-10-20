@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c6405a88e78594a922e48257ea998f, type: 3}
   m_Name: LegSapphire_S
   m_EditorClassIdentifier: 
-  boneType: 0
+  boneType: 3
   boneSize: 1
   powerLevel: 2
   boneSprite: {fileID: 2089635601, guid: 32500da5d1c27ca4081686805db4f2e0, type: 3}
