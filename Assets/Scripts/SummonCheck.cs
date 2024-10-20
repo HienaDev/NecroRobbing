@@ -22,7 +22,12 @@ public class SummonCheck : MonoBehaviour
     public bool leftLeg = false;
 
     [SerializeField] private SkeletonManager skeletonManager;
-       
+    private SoundsScript soundScript;
+    
+    void Start()
+    {
+        soundScript = GetComponent<SoundsScript>();
+    }
     private bool CheckIfReady()
     {
         return(headBone != null && torsoBone != null && leftArmBone != null && rightArmBone != null && leftLegBone != null && rightLegBone != null);
@@ -64,6 +69,7 @@ public class SummonCheck : MonoBehaviour
 
         if (CheckIfReady())
         {
+            soundScript.PlayAudio();
             summonButton.interactable = true;
         }
     }
@@ -111,7 +117,6 @@ public class SummonCheck : MonoBehaviour
     }
 
     public BoneBase GetRightLeg() => headBone;
-
 
 
     public void Summon()
