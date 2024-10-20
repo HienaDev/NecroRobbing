@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -16,11 +17,14 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 velocity;
 
-    private Animator animator;
+    public Animator animator;
+
+    public bool canMove;
 
     // Start is called before the first frame update
     void Start()
     {
+        canMove = true;
         rb = GetComponent<Rigidbody2D>();
         velocity = Vector2.zero;
 
@@ -39,25 +43,29 @@ public class PlayerMovement : MonoBehaviour
     {
         velocity = Vector2.zero;
 
-        if (Input.GetKey(up))
+        if(canMove)
         {
-            velocity.y = 1;
-        }
-        if (Input.GetKey(down))
-        {
-            velocity.y = -1;
-        }
-        if (Input.GetKey(right))
-        {
-            velocity.x = 1;
-        }
-        if (Input.GetKey(left))
-        {
-            velocity.x = -1;
-        }
+            if (Input.GetKey(up))
+            {
+                velocity.y = 1;
+            }
+            if (Input.GetKey(down))
+            {
+                velocity.y = -1;
+            }
+            if (Input.GetKey(right))
+            {
+                velocity.x = 1;
+            }
+            if (Input.GetKey(left))
+            {
+                velocity.x = -1;
+            }
 
-        rb.velocity = velocity.normalized * movementSpeed;
+            rb.velocity = velocity.normalized * movementSpeed;
 
+            
+        }
         animator.SetFloat("MovSpeed", Mathf.Abs(rb.velocity.magnitude));
     }
 

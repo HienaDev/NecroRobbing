@@ -175,7 +175,7 @@ public class ClickOnTiles : MonoBehaviour
 
             for (int i = 0; i < tilesGeneratorScript.BoneInventory.Count; i++)
             {
-                if(i > inventorySlotsRobbing.Length)
+                if(i < inventorySlotsRobbing.Length)
                 {
                     inventorySlotsRobbing[i].SetActive(true);
                     inventorySlotsRobbing[i].GetComponent<Image>().sprite = tilesGeneratorScript.BoneInventory[i].BoneSprite;
