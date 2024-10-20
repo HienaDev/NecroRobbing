@@ -1165,8 +1165,8 @@ Transform:
   m_GameObject: {fileID: 107071713}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.68, z: 0}
-  m_LocalScale: {x: 0.03125, y: 0.03125, z: 0.03125}
+  m_LocalPosition: {x: 0, y: -22.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1856061740}
@@ -8699,7 +8699,7 @@ MonoBehaviour:
   handButtonON: {fileID: 1719657430}
   handButtonOFF: {fileID: 465253706}
   meterFill: {fileID: 63510288}
-  graveDurability: 30
+  graveDurability: 50
   text: {fileID: 1352440518}
   graveRobbing: {fileID: 1204423705}
   graveDigging: {fileID: 1192214161}
@@ -14965,6 +14965,24 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7407b77a9e5be0a4bba92923fdd6912f, type: 2}
     - {fileID: 11400000, guid: 251d17b7f7e3c88448e53a7ca0506a9b, type: 2}
     boneBase: {fileID: 11400000, guid: 8b7deaf23266d5341a5293b715ee7dea, type: 2}
+  - boneConfig:
+    - {x: 1, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    tilesInOrder:
+    - {fileID: 11400000, guid: 129cd4d14a888d54e9054421e97c3f90, type: 2}
+    - {fileID: 11400000, guid: 7dd82281daeed4f4f86967c060119755, type: 2}
+    - {fileID: 11400000, guid: aac705e8b4faf9449990a76212bf9a8f, type: 2}
+    - {fileID: 11400000, guid: 516d0d23690e6b240b9815589b811bee, type: 2}
+    boneBase: {fileID: 11400000, guid: 51945a0d9d20a01458ef32bd94bf7773, type: 2}
+  - boneConfig:
+    - {x: 1, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    tilesInOrder:
+    - {fileID: 11400000, guid: c5ee154428ae8ac4fb9511c2ba996280, type: 2}
+    - {fileID: 11400000, guid: 35605bd10ea75ca4395c60d8ab43d80b, type: 2}
+    - {fileID: 11400000, guid: 3ee87a77f9e8cd041b80858182557004, type: 2}
+    - {fileID: 11400000, guid: 768c26a622ddfc343837a6f9ff119c25, type: 2}
+    boneBase: {fileID: 11400000, guid: 51945a0d9d20a01458ef32bd94bf7773, type: 2}
   bigBones:
   - boneConfig:
     - {x: 1, y: 1, z: 1}
@@ -19327,7 +19345,7 @@ Tilemap:
     m_Data: {r: 5.4557936e-29, g: 5.4557936e-29, b: 5.4557936e-29, a: 5.4557936e-29}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Origin: {x: -5, y: -5, z: 0}
   m_Size: {x: 10, y: 10, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -21995,7 +22013,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 375, y: 15, z: 0}
-  m_LocalScale: {x: 64, y: 64, z: 64}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 107071714}
@@ -22039,7 +22057,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 32, y: 32}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -22091,7 +22109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 35017250809b808428a5e6223c517e52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
