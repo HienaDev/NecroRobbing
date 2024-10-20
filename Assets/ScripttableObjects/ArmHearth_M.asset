@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c6405a88e78594a922e48257ea998f, type: 3}
   m_Name: ArmHearth_M
   m_EditorClassIdentifier: 
-  boneType: 0
-  boneSize: 0
-  powerLevel: 0
+  boneType: 1
+  boneSize: 2
+  powerLevel: 2
   boneSprite: {fileID: 1992767891, guid: 96d264c46b8c1d7479189d5c56df2bdf, type: 3}

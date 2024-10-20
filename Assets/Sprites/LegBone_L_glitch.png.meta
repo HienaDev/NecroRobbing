@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LegBone_L_glitch_0: 1674717161694421588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
