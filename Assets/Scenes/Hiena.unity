@@ -16750,6 +16750,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ff2aef835cef2f341846befad08694e9, type: 3}
   - {fileID: 8300000, guid: 4738ae32dba5dea409da98788e276008, type: 3}
   - {fileID: 8300000, guid: acd1608a317bc054eb96ef2fa7f2989d, type: 3}
+  - {fileID: 8300000, guid: 4738ae32dba5dea409da98788e276008, type: 3}
+  - {fileID: 8300000, guid: 8a9d311a15917a3438702040981f81bc, type: 3}
+  - {fileID: 8300000, guid: 529a3a2148b8fd6439a6de0872fff981, type: 3}
   stepsMixer: {fileID: 0}
   takePictureSound: []
   takePictureMixer: {fileID: 0}
@@ -19652,7 +19655,7 @@ MonoBehaviour:
   takePictureSound: []
   takePictureMixer: {fileID: 0}
   stepsGravelSound:
-  - {fileID: 8300000, guid: 2a57eacb457c76f43924190910708815, type: 3}
+  - {fileID: 8300000, guid: cd5ab698724de3c4494ffa4615e54cc2, type: 3}
   stepsGravelMixer: {fileID: 0}
   blockBreakingSound:
   - {fileID: 8300000, guid: ca4a8b6e076fe0c4bad2d79de7d5fe83, type: 3}
@@ -19660,7 +19663,8 @@ MonoBehaviour:
   pickUpSound:
   - {fileID: 8300000, guid: 034c9695f89e30f478ae89b8c6ff590f, type: 3}
   pickUpMixer: {fileID: 0}
-  menuSound: []
+  menuSound:
+  - {fileID: 8300000, guid: 1e001000691615c47b473d2dd6ae5e7b, type: 3}
   menuMixer: {fileID: 0}
   timeBetweenSteps: 0
   OnGravel: 0

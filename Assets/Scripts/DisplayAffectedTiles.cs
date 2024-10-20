@@ -71,7 +71,7 @@ public class DisplayAffectedTiles : MonoBehaviour
 
     public void ActivateHand()
     {
-
+        soundManager.PlayMenuSound();
         currentTool = 3;
         currentCursor.SetActive(false);
         currentCursor = hand;
