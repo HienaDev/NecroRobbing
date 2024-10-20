@@ -14,6 +14,7 @@ public class ClickOnTiles : MonoBehaviour
         public Tile[] tilesInOrder;
     }
 
+
     [SerializeField] private Tilemap[] tilemaps;
     private Tilemap currentTilemap = null;
     private Vector3Int currentPos = Vector3Int.zero;
@@ -52,11 +53,12 @@ public class ClickOnTiles : MonoBehaviour
 
     [SerializeField] private GameObject[] inventorySlotsRobbing;
 
+    private SoundManager soundManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        soundManager = GetComponent<SoundManager>();
     }
 
     private void OnEnable()
@@ -104,18 +106,22 @@ public class ClickOnTiles : MonoBehaviour
                 {
                     case 0:
                         Shovel(position);
+                        soundManager.PlayStepsGravelSound();
                         UpdateGridData();
                         break;
                     case 1:
                         Spell(position);
+                        soundManager.PlayMenuSound();
                         UpdateGridData();
                         break;
                     case 2:
                         Brush(position);
+                        soundManager.PlayTakePictureSound();
                         UpdateGridData();
                         break;
                     case 3:
                         Hand(position);
+
                         UpdateGridData();
                         break;
                     default:

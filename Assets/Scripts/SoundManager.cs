@@ -67,13 +67,14 @@ public class SoundManager : MonoBehaviour
         audioSourceMenu = gameObject.AddComponent<AudioSource>();
         audioSourceMenu.outputAudioMixerGroup = menuMixer;
 
+        audioSourceBlockBreaking.playOnAwake = false;
 
-        audioSourceTakePicture.volume = 0.2f;
-        audioSourceSteps.volume = 0.1f;
-        audioSourceStepsGravel.volume = 0.1f;
-        audioSourceBlockBreaking.volume = 3f;
+        audioSourceTakePicture.volume = 1f;
+        audioSourceSteps.volume = 1f;
+        audioSourceStepsGravel.volume = 1f;
+        audioSourceBlockBreaking.volume = 1f;
         audioSourcePickUp.volume = 1f;
-        audioSourceMenu.volume = 0.1f;
+        audioSourceMenu.volume = 1f;
 
 
         //audioSourcePickUp.clip = pickUpSound;

@@ -21,7 +21,7 @@ public class DisplayAffectedTiles : MonoBehaviour
     [SerializeField] private int shovelSize = 3;
     public int ShovelSize { get { return shovelSize; } }
 
-    [SerializeField] private GameObject shovel; 
+    [SerializeField] private GameObject shovel;
     [SerializeField] private GameObject spell;
     [SerializeField] private GameObject brush;
     [SerializeField] private GameObject hand;
@@ -29,12 +29,20 @@ public class DisplayAffectedTiles : MonoBehaviour
 
     [SerializeField] private ClickOnTiles clickOnTilesScript;
 
+    private SoundManager soundManager;
+
+
+    private void OnEnable()
+    {
+        Cursor.visible = false;
+        currentCursor = hand;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Cursor.visible = false;
-        currentCursor = hand;
+        soundManager = GetComponent<SoundManager>();
+
     }
 
     private void Update()
@@ -63,6 +71,7 @@ public class DisplayAffectedTiles : MonoBehaviour
 
     public void ActivateHand()
     {
+
         currentTool = 3;
         currentCursor.SetActive(false);
         currentCursor = hand;
@@ -73,6 +82,7 @@ public class DisplayAffectedTiles : MonoBehaviour
 
     public void ActivateBrush()
     {
+        soundManager.PlayBlockBreakingSound();
         currentTool = 2;
         currentCursor.SetActive(false);
         currentCursor = brush;
@@ -83,6 +93,7 @@ public class DisplayAffectedTiles : MonoBehaviour
 
     public void ActivateSpell()
     {
+        soundManager.PlayPickUpSound();
         currentTool = 1;
         currentCursor.SetActive(false);
         currentCursor = spell;
@@ -93,6 +104,7 @@ public class DisplayAffectedTiles : MonoBehaviour
 
     public void ActivateShovel()
     {
+        soundManager.PlayStepsGravelSound();
         currentTool = 0;
         currentCursor.SetActive(false);
         currentCursor = shovel;
@@ -104,7 +116,7 @@ public class DisplayAffectedTiles : MonoBehaviour
 
     private void FixedUpdate()
     {
- 
+
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Vector3 worldPoint = ray.GetPoint(-ray.origin.z / ray.direction.z);
@@ -122,7 +134,7 @@ public class DisplayAffectedTiles : MonoBehaviour
             }
 
             changedTiles.Clear();
-            if(position.x <= 4 && position.x >= -5 && position.y >= -5 && position.y <= 4)
+            if (position.x <= 4 && position.x >= -5 && position.y >= -5 && position.y <= 4)
             {
                 switch (currentTool)
                 {
@@ -142,9 +154,9 @@ public class DisplayAffectedTiles : MonoBehaviour
                         break;
                 }
             }
- 
 
-            
+
+
         }
 
     }
@@ -168,7 +180,7 @@ public class DisplayAffectedTiles : MonoBehaviour
         int addToValue = 0;
         int increment = 1;
 
-        
+
         for (int i = -1; i < 2; i++)
         {
             for (int j = -addToValue; j < addToValue + 1; j++)
@@ -177,7 +189,7 @@ public class DisplayAffectedTiles : MonoBehaviour
                 displayTilemap.SetTileFlags(currentPositionWithOffset, TileFlags.None);
                 changedTiles.Add(currentPositionWithOffset);
 
-                if(i == 0 && j == 0)
+                if (i == 0 && j == 0)
                 {
                     displayTilemap.SetTile(currentPositionWithOffset, greenTile);
                 }
@@ -207,8 +219,8 @@ public class DisplayAffectedTiles : MonoBehaviour
                 changedTiles.Add(currentPositionWithOffset);
 
                 if (i == 0 && j == 0)
-                {                 
-                    displayTilemap.SetTile(currentPositionWithOffset, redTile);                  
+                {
+                    displayTilemap.SetTile(currentPositionWithOffset, redTile);
                 }
                 else if (i >= -1 && i <= 1 && j >= -1 && j <= 1)
                 {

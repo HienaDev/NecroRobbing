@@ -14,26 +14,26 @@ public class PathRaid : MonoBehaviour
 
     private int pointsIndex;
 
+    [SerializeField] private GameObject graveRobbing;
+    [SerializeField] private GameObject raid;
 
     [SerializeField]
     private GameObject[] graves;
+
+    private bool stopped = false;
+    private bool lastStop = false;
 
     // Start is called before the first frame update
     void Start()
     {
         transform.position = Points[pointsIndex].transform.position;
-        StartCoroutine(Path());
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private IEnumerator Path()
-    {
-        if (pointsIndex <= Points.Length - 1)
+        if (pointsIndex <= Points.Length - 1 && !stopped)
         {
             transform.position = Vector2.MoveTowards(transform.position, Points[pointsIndex].transform.position, moveSpeed * Time.deltaTime);
 
@@ -41,30 +41,55 @@ public class PathRaid : MonoBehaviour
             {
                 if (Points[pointsIndex].transform.position == firstEncounter.position)
                 {
-                    yield return new WaitForSeconds(3f);
+                    stopped = true;
+                    GetComponent<AudioSource>().Play();
+                    StartCoroutine(Stop());
                 }
                 if (Points[pointsIndex].transform.position == secondEncounter.position)
                 {
-                    yield return new WaitForSeconds(3f);
+                    stopped = true;
+                    GetComponent<AudioSource>().Play();
+
+                    StartCoroutine(Stop());
                 }
+
                 if (Points[pointsIndex].transform.position == thirdEncounter.position)
                 {
-                    yield return new WaitForSeconds(3f);
-                }
+                    stopped = true;
+                    GetComponent<AudioSource>().Play();
+                
+                StartCoroutine(Stop());}
+
                 if (Points[pointsIndex].transform.position == endEncounter.position)
                 {
-                    yield return new WaitForSeconds(3f);
+                    stopped = true;
+                    GetComponent<AudioSource>().Play();
+                    lastStop = true;
+                    StartCoroutine(Stop());
 
-                    foreach(GameObject go in graves)
-                    {
-                        go.GetComponent<GraveManager>().ResetGrave();
-                    }
                 }
                 pointsIndex += 1;
             }
 
-            yield return null;
 
+
+        }
+    }
+
+    private IEnumerator Stop()
+    {
+        yield return new WaitForSeconds(3f);
+        stopped = false;
+
+        if(lastStop)
+        {
+
+            foreach (GameObject go in graves)
+            {
+                go.GetComponent<GraveManager>().ResetGrave();
+                raid.SetActive(false);
+                graveRobbing.SetActive(true);
+            }
         }
     }
 
