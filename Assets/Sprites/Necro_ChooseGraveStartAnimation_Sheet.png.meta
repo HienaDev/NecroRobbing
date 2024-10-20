@@ -138,6 +138,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -484,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Necro_ChooseGraveStartAnimation_Sheet_0: 143291384634757281
+      Necro_ChooseGraveStartAnimation_Sheet_1: 1694309732458992565
+      Necro_ChooseGraveStartAnimation_Sheet_10: 1650235981192925767
+      Necro_ChooseGraveStartAnimation_Sheet_11: -2846889704151529705
+      Necro_ChooseGraveStartAnimation_Sheet_12: -4121667936634657923
+      Necro_ChooseGraveStartAnimation_Sheet_13: 5583103155111489315
+      Necro_ChooseGraveStartAnimation_Sheet_14: 8049085993434983033
+      Necro_ChooseGraveStartAnimation_Sheet_2: -7780277040159395772
+      Necro_ChooseGraveStartAnimation_Sheet_3: -6677159926043017276
+      Necro_ChooseGraveStartAnimation_Sheet_4: -8843604224522133054
+      Necro_ChooseGraveStartAnimation_Sheet_5: -7463329857821708401
+      Necro_ChooseGraveStartAnimation_Sheet_6: 7528781691835666990
+      Necro_ChooseGraveStartAnimation_Sheet_7: -7647159972327516949
+      Necro_ChooseGraveStartAnimation_Sheet_8: 4436715559235864755
+      Necro_ChooseGraveStartAnimation_Sheet_9: 3382959385623632103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
