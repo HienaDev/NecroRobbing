@@ -3,6 +3,7 @@ using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+
 public class TilesGenerator : MonoBehaviour
 {
     [System.Serializable]
@@ -12,6 +13,8 @@ public class TilesGenerator : MonoBehaviour
         public Tile[] tilesInOrder;
         public BoneBase boneBase;
     }
+
+    [SerializeField] private GameObject[] graveParticles;
 
     [SerializeField] private Vector2Int gridSize;
 
@@ -27,6 +30,7 @@ public class TilesGenerator : MonoBehaviour
     [SerializeField] private Tile badBrokenTile;
     [SerializeField] private Tile boneDust;
     private int[,] gridDirtNumbers;
+    private int[,] oldGridDirtNumbers;
 
     [Header("Bones"), SerializeField] private Tilemap gridBones;
     [SerializeField] private int numberOfBonesToGenerate = 3;
@@ -42,7 +46,9 @@ public class TilesGenerator : MonoBehaviour
     public List<BoneBase> BoneInventory => boneInventory;
 
     [Header("GRID"), SerializeField] private ClickOnTiles clickOnTileScript;
-    
+
+    private bool particles = false;
+    private int currentParticle = 0;
     //ola
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -54,10 +60,17 @@ public class TilesGenerator : MonoBehaviour
 
     private void OnEnable()
     {
+        particles = false;
+        currentParticle = 0;
 
-        foreach(GameObject slot in UIInventory)
+        foreach (GameObject slot in UIInventory)
         {
             slot.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+        }
+
+        foreach(GameObject particle in graveParticles)
+        {
+            particle.SetActive(false);
         }
 
         currentInventorySlot = 0;
@@ -85,10 +98,13 @@ public class TilesGenerator : MonoBehaviour
 
     private void GenerateGame()
     {
+        
         GenerateBones();
         GenerateGrid();
         SendGridData();
         GenerateTiles();
+        particles = true;
+        Debug.Log("partciels true");
     }
 
     private void SendGridData()
@@ -107,6 +123,7 @@ public class TilesGenerator : MonoBehaviour
     {
         boneDustPos = new List<Vector3Int>();
         gridBonesNumber = new int[gridSize.x, gridSize.y];
+        oldGridDirtNumbers = new int[gridSize.x, gridSize.y];
         gridBones.ClearAllTiles();
         generatedBones = new List<List<Vector3Int>>();
         generatedBonesSprites = new List<Bone>();
@@ -251,8 +268,12 @@ public class TilesGenerator : MonoBehaviour
             for (int y = 0; y < gridSize.y; y++)
             {
                 gridDirtNumbers[x, y] = Random.Range(1, 4);
+                oldGridDirtNumbers[x, y] = gridDirtNumbers[x, y];
             }
         }
+
+
+        
     }
 
     private void GenerateTiles()
@@ -265,16 +286,22 @@ public class TilesGenerator : MonoBehaviour
                 switch (gridDirtNumbers[x, y])
                 {
                     case 50:
+                        
                         bool boneExposed = CheckIfBoneExposed(
                             new Vector3Int(x, y, 0) - new Vector3Int((gridSize.x / 2), (gridSize.y / 2), 0));
 
                         if (boneExposed)
                         {
-                            Debug.Log("bone added");
-                            foreach (BoneBase bone in boneInventory)
+                            if (oldGridDirtNumbers[x, y] != 50 && particles)
                             {
-                                Debug.Log(bone.name);
-                                Debug.Log(bone.BoneSprite.border);
+                                Debug.Log("tried particle");
+                                graveParticles[currentParticle].SetActive(false);
+                                graveParticles[currentParticle].SetActive(true);
+                                currentParticle++;
+                                if(currentParticle >= graveParticles.Length)
+                                    currentParticle = 0;
+
+                                graveParticles[currentParticle].transform.position = gridDirt.CellToWorld(new Vector3Int(x, y, 0) - new Vector3Int((gridSize.x / 2), (gridSize.y / 2), 0));
                             }
                         }
 
@@ -285,21 +312,82 @@ public class TilesGenerator : MonoBehaviour
                         gridDirt.SetTile(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
                                                         y - (gridSize.y / 2 - gridSize.y % 2)
                                                         , 0), hardTile3);
+
+
+                        
+
+                        if (oldGridDirtNumbers[x, y] != 3 && particles)
+                        {
+                            Debug.Log("tried particle");
+                            graveParticles[currentParticle].SetActive(false);
+                            graveParticles[currentParticle].SetActive(true);
+                            currentParticle++;
+                            if(currentParticle >= graveParticles.Length)
+                                currentParticle = 0;
+
+                            graveParticles[currentParticle].transform.position = gridDirt.CellToWorld(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
+                                                        y - (gridSize.y / 2 - gridSize.y % 2)
+                                                        , 0));
+                        }
+
                         break;
                     case 2:
                         gridDirt.SetTile(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
                                                         y - (gridSize.y / 2 - gridSize.y % 2)
                                                         , 0), softTile2);
+
+                        Debug.Log(oldGridDirtNumbers[x, y] + " is different from 2");
+
+                        if (oldGridDirtNumbers[x, y] != 2 && particles)
+                        {
+                            Debug.Log("tried particle");
+                            graveParticles[currentParticle].SetActive(false);
+                            graveParticles[currentParticle].SetActive(true);
+                            currentParticle++;
+                            if (currentParticle >= graveParticles.Length)
+                                currentParticle = 0;
+
+                            graveParticles[currentParticle].transform.position = gridDirt.CellToWorld(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
+                                                        y - (gridSize.y / 2 - gridSize.y % 2)
+                                                        , 0));
+                        }
                         break;
                     case 1:
                         gridDirt.SetTile(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
                                                         y - (gridSize.y / 2 - gridSize.y % 2)
                                                         , 0), dirtTile1);
+
+                        if (oldGridDirtNumbers[x, y] != 1 && particles)
+                        {
+                            Debug.Log("tried particle");
+                            graveParticles[currentParticle].SetActive(false);
+                            graveParticles[currentParticle].SetActive(true);
+                            currentParticle++;
+                            if(currentParticle >= graveParticles.Length)
+                                currentParticle = 0;
+
+                            graveParticles[currentParticle].transform.position = gridDirt.CellToWorld(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
+                                                        y - (gridSize.y / 2 - gridSize.y % 2)
+                                                        , 0));
+                        }
                         break;
                     case 0:
                         gridDirt.SetTile(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
                                                         y - (gridSize.y / 2 - gridSize.y % 2)
                                                         , 0), null);
+                        if (oldGridDirtNumbers[x, y] != 0 && particles)
+                        {
+                            Debug.Log("tried particle");
+                            graveParticles[currentParticle].SetActive(false);
+                            graveParticles[currentParticle].SetActive(true);
+                            currentParticle++;
+                            if(currentParticle >= graveParticles.Length)
+                                currentParticle = 0;
+
+                            graveParticles[currentParticle].transform.position = gridDirt.CellToWorld(new Vector3Int(x - (gridSize.x / 2 - gridSize.x % 2),
+                                                        y - (gridSize.y / 2 - gridSize.y % 2)
+                                                        , 0));
+                        }
                         break;
                     case int n when n < 0:
                         if (gridDirtNumbers[x, y] <= -1)
@@ -319,6 +407,14 @@ public class TilesGenerator : MonoBehaviour
                                                         , 0), Color.red);
                         break;
                 }
+            }
+        }
+
+        for (int x = 0; x < gridSize.x; x++)
+        {
+            for (int y = 0; y < gridSize.y; y++)
+            {
+                oldGridDirtNumbers[x, y] = gridDirtNumbers[x, y];
             }
         }
 

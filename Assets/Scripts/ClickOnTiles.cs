@@ -50,6 +50,8 @@ public class ClickOnTiles : MonoBehaviour
     [SerializeField] private GameObject graveRobbing;
     [SerializeField] private GameObject graveDigging;
 
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -112,18 +114,19 @@ public class ClickOnTiles : MonoBehaviour
             {
                 case 0:
                     Shovel(position);
-                    
+                    UpdateGridData();
                     break;
                 case 1:
                     Spell(position);
-
+                    UpdateGridData();
                     break;
                 case 2:
                     Brush(position);
-
+                    UpdateGridData();
                     break;
                 case 3:
                     Hand(position);
+                    UpdateGridData();
                     break;
                 default:
                     break;
@@ -131,7 +134,7 @@ public class ClickOnTiles : MonoBehaviour
 
         }
 
-        UpdateGridData();
+        
     }
 
     private void UpdateMeter(float damage)
