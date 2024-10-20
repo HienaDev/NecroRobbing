@@ -62,10 +62,11 @@ public class PlayerMovement : MonoBehaviour
                 velocity.x = -1;
             }
 
-            rb.velocity = velocity.normalized * movementSpeed;
+           
 
             
         }
+        rb.velocity = velocity.normalized * movementSpeed;
         animator.SetFloat("MovSpeed", Mathf.Abs(rb.velocity.magnitude));
     }
 
