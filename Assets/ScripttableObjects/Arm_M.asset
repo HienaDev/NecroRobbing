@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Arm_M
   m_EditorClassIdentifier: 
   boneType: 1
-  boneSize: 0
-  powerLevel: 0
+  boneSize: 2
+  powerLevel: 1
   boneSprite: {fileID: 681411158, guid: bd80337dabb572e468f2e2f23e121417, type: 3}

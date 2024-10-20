@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "BoneBase", menuName = "Scriptable Objects/BoneBase")]
+[System.Serializable]
 public class BoneBase : ScriptableObject
 {
     [SerializeField] private BoneType boneType;

@@ -4,8 +4,7 @@ using UnityEngine.EventSystems;
 
 public class Drag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    [SerializeField] private Canvas canvas;
-    
+    private Canvas canvas;
     private CanvasGroup gCanvas;
     private RectTransform rectTrans;
 
@@ -13,6 +12,7 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     {
         rectTrans = GetComponent<RectTransform>();
         gCanvas = GetComponent<CanvasGroup>();
+        canvas = FindFirstObjectByType<Canvas>();
     }
     public void OnPointerDown(PointerEventData eventData)
     {
