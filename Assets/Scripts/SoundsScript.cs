@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundsScript : MonoBehaviour
 {
     [field:SerializeField] public AudioClip SoundToPlay { get; set; }
+    [SerializeField] private bool loop;
     private AudioSource audioSource;
     void Start()
     {
@@ -12,6 +13,8 @@ public class SoundsScript : MonoBehaviour
     }
     public void PlayAudio()
     {
+        if (loop)
+            audioSource.loop = true;
         audioSource.clip = SoundToPlay;
         audioSource.Play();
     }
