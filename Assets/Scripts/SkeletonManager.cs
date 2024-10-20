@@ -15,20 +15,25 @@ public class SkeletonManager : MonoBehaviour
     [SerializeField] private SpriteRenderer armRight;
     [SerializeField] private SpriteRenderer armLeft;
 
+    [SerializeField] private float skeletonSpeed;
+
+    private Rigidbody2D rb;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        head.sprite = headSprites[Random.Range(0, headSprites.Length)];
-        torso.sprite = torsoSprites[Random.Range(0, torsoSprites.Length)];
-        legRight.sprite = legSprites[Random.Range(0, legSprites.Length)];
-        legLeft.sprite = legSprites[Random.Range(0, legSprites.Length)];
-        armRight.sprite = armSprites[Random.Range(0, armSprites.Length)];
-        armLeft.sprite = armSprites[Random.Range(0, armSprites.Length)];
+        rb = GetComponent<Rigidbody2D>();
+
+        rb.velocity = new Vector2(skeletonSpeed, 0f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SummonSkeleton(BoneBase head, BoneBase torso, BoneBase legRight, BoneBase legLeft, BoneBase armRight, BoneBase armLeft)
     {
-        
+        this.head.sprite = head.BoneSprite;
+        this.torso.sprite = torso.BoneSprite;
+        this.legRight.sprite = legRight.BoneSprite;
+        this.legLeft.sprite = legLeft.BoneSprite;
+        this.armRight.sprite = armRight.BoneSprite;
+        this.armLeft.sprite = armLeft.BoneSprite;
     }
 }

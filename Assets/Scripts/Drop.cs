@@ -9,6 +9,9 @@ public class Drop : MonoBehaviour, IDropHandler
     private RectTransform rectTransform;
     private bool isPlaced = false;
     public bool IsPlaced => isPlaced;
+
+
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();

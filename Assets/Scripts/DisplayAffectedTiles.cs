@@ -27,6 +27,8 @@ public class DisplayAffectedTiles : MonoBehaviour
     [SerializeField] private GameObject hand;
     private GameObject currentCursor;
 
+    [SerializeField] private ClickOnTiles clickOnTilesScript;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,38 +42,64 @@ public class DisplayAffectedTiles : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            currentTool = 3;
-            currentCursor.SetActive(false);
-            currentCursor = hand;
-            hand.SetActive(true);
-            currentPosition = new Vector3Int(20, 20, 0);
+            ActivateHand();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            currentTool = 2;
-            currentCursor.SetActive(false);
-            currentCursor = brush;
-            brush.SetActive(true);
-            currentPosition = new Vector3Int(20, 20, 0);
+            ActivateBrush();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            currentTool = 1;
-            currentCursor.SetActive(false);
-            currentCursor = spell;
-            spell.SetActive(true);
-            currentPosition = new Vector3Int(20, 20, 0);
+            ActivateSpell();
+
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            currentTool = 0;
-            currentCursor.SetActive(false);
-            currentCursor = shovel;
-            shovel.SetActive(true);
-            currentPosition = new Vector3Int(20, 20, 0);
+            ActivateShovel();
         }
+    }
+
+    public void ActivateHand()
+    {
+        currentTool = 3;
+        currentCursor.SetActive(false);
+        currentCursor = hand;
+        hand.SetActive(true);
+        currentPosition = new Vector3Int(20, 20, 0);
+        clickOnTilesScript.ActivateHand();
+    }
+
+    public void ActivateBrush()
+    {
+        currentTool = 2;
+        currentCursor.SetActive(false);
+        currentCursor = brush;
+        brush.SetActive(true);
+        currentPosition = new Vector3Int(20, 20, 0);
+        clickOnTilesScript.ActivateBrush();
+    }
+
+    public void ActivateSpell()
+    {
+        currentTool = 1;
+        currentCursor.SetActive(false);
+        currentCursor = spell;
+        spell.SetActive(true);
+        currentPosition = new Vector3Int(20, 20, 0);
+        clickOnTilesScript.ActivateSpell();
+    }
+
+    public void ActivateShovel()
+    {
+        currentTool = 0;
+        currentCursor.SetActive(false);
+        currentCursor = shovel;
+        shovel.SetActive(true);
+        currentPosition = new Vector3Int(20, 20, 0);
+        clickOnTilesScript.ActivateShovel();
+
     }
 
     private void FixedUpdate()
@@ -82,7 +110,7 @@ public class DisplayAffectedTiles : MonoBehaviour
         Vector3 worldPoint = ray.GetPoint(-ray.origin.z / ray.direction.z);
         Vector3Int position = displayTilemap.WorldToCell(worldPoint);
 
-        //Debug.Log(position);
+        Debug.Log(position);
 
         if ((currentPosition != position))
         {
@@ -94,24 +122,27 @@ public class DisplayAffectedTiles : MonoBehaviour
             }
 
             changedTiles.Clear();
-
-            switch(currentTool)
+            if(position.x <= 4 && position.x >= -5 && position.y >= -5 && position.y <= 4)
             {
-                case 0:
-                    Shovel(currentPosition);
-                    break;
-                case 1:
-                    Spell(currentPosition);
-                    break;
-                case 2:
-                    Brush(currentPosition);
-                    break;
-                case 3:
-                    Hand(currentPosition);
-                    break;
-                default:
-                    break;
+                switch (currentTool)
+                {
+                    case 0:
+                        Shovel(currentPosition);
+                        break;
+                    case 1:
+                        Spell(currentPosition);
+                        break;
+                    case 2:
+                        Brush(currentPosition);
+                        break;
+                    case 3:
+                        Hand(currentPosition);
+                        break;
+                    default:
+                        break;
+                }
             }
+ 
 
             
         }
@@ -137,6 +168,7 @@ public class DisplayAffectedTiles : MonoBehaviour
         int addToValue = 0;
         int increment = 1;
 
+        
         for (int i = -1; i < 2; i++)
         {
             for (int j = -addToValue; j < addToValue + 1; j++)

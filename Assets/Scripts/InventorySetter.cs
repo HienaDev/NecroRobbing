@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class InventorySetter : MonoBehaviour
 {
-    [SerializeField] BoneType boneType;
+    [SerializeField] private BoneType boneType;
+    public BoneType BoneType { get { return boneType; } }
     private List<BoneBase> inventory;
     private InventorySlot[] slots;
     private InventoryManager inventoryManager;
@@ -39,16 +40,55 @@ public class InventorySetter : MonoBehaviour
     }
     private void SetInventory()
     {
-        foreach (BoneBase bone in inventory)
+
+        foreach(InventorySlot slot in slots)
         {
-            GameObject slot = transform.GetChild(i).gameObject;
-            slot.GetComponentInChildren<Image>().sprite = bone.BoneSprite;
-            slot.GetComponentInChildren<Image>().color = new Color(1f,1f,1f,1f);
-            slot.GetComponent<InventorySlot>().BoneBase = bone;
-            i++;
+            slot.gameObject.SetActive(false);
         }
-        i = 0;
+
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            slots[i].gameObject.SetActive(true);
+            slots[i].GetComponentInChildren<Image>().sprite = inventory[i].BoneSprite;
+            slots[i].GetComponentInChildren<Image>().color = new Color(1f, 1f, 1f, 1f);
+            slots[i].GetComponent<InventorySlot>().BoneBase = inventory[i];
+        }
+
     }
+
+    public void UpdateInventory()
+    {
+
+        switch (boneType)
+        {
+            case BoneType.Head:
+                inventory = inventoryManager.SkullInventory;
+                break;
+            case BoneType.Arm:
+                inventory = inventoryManager.ArmInventory;
+                break;
+            case BoneType.Torso:
+                inventory = inventoryManager.ToraxInventory;
+                break;
+            case BoneType.Leg:
+                inventory = inventoryManager.LegInventory;
+                break;
+        }
+
+        foreach (InventorySlot slot in slots)
+        {
+            slot.gameObject.SetActive(false);
+        }
+
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            slots[i].gameObject.SetActive(true);
+            slots[i].GetComponentInChildren<Image>().sprite = inventory[i].BoneSprite;
+            slots[i].GetComponentInChildren<Image>().color = new Color(1f, 1f, 1f, 1f);
+            slots[i].GetComponent<InventorySlot>().BoneBase = inventory[i];
+        }
+    }
+
     public void ResetInventory(int id)
     {
         inventory.RemoveAt(id);

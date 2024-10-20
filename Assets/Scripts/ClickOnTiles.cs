@@ -50,12 +50,13 @@ public class ClickOnTiles : MonoBehaviour
     [SerializeField] private GameObject graveRobbing;
     [SerializeField] private GameObject graveDigging;
 
+    [SerializeField] private GameObject[] inventorySlotsRobbing;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     private void OnEnable()
@@ -71,36 +72,25 @@ public class ClickOnTiles : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            currentTool = 3;
-            currentToolUI.SetActive(false);
-            handButtonON.SetActive(true);
-            currentToolUI = handButtonON;
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha4))
+        //{
+        //    ActivateHand();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            currentTool = 2;
-            currentToolUI.SetActive(false);
-            brushButtonON.SetActive(true);
-            currentToolUI = brushButtonON;
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha3))
+        //{
+        //    ActivateBrush();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            currentTool = 1;
-            currentToolUI.SetActive(false);
-            spellButtonON.SetActive(true);
-            currentToolUI = spellButtonON;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            currentTool = 0;
-            currentToolUI.SetActive(false);
-            shovelButtonON.SetActive(true);
-            currentToolUI = shovelButtonON;
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha2))
+        //{
+        //    ActivateSpell();
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.Alpha1))
+        //{
+        //    ActivateShovel();
+        //}
 
         if ((Input.GetKeyDown(KeyCode.Mouse0)))
         {
@@ -109,32 +99,64 @@ public class ClickOnTiles : MonoBehaviour
             Vector3Int position = tilemaps[0].WorldToCell(worldPoint);
 
 
-
-            switch (currentTool)
-            {
-                case 0:
-                    Shovel(position);
-                    UpdateGridData();
-                    break;
-                case 1:
-                    Spell(position);
-                    UpdateGridData();
-                    break;
-                case 2:
-                    Brush(position);
-                    UpdateGridData();
-                    break;
-                case 3:
-                    Hand(position);
-                    UpdateGridData();
-                    break;
-                default:
-                    break;
-            }
+            if (position.x <= 4 && position.x >= -5 && position.y >= -5 && position.y <= 4)
+                switch (currentTool)
+                {
+                    case 0:
+                        Shovel(position);
+                        UpdateGridData();
+                        break;
+                    case 1:
+                        Spell(position);
+                        UpdateGridData();
+                        break;
+                    case 2:
+                        Brush(position);
+                        UpdateGridData();
+                        break;
+                    case 3:
+                        Hand(position);
+                        UpdateGridData();
+                        break;
+                    default:
+                        break;
+                }
 
         }
 
-        
+
+    }
+
+    public void ActivateHand()
+    {
+        currentTool = 3;
+        currentToolUI.SetActive(false);
+        handButtonON.SetActive(true);
+        currentToolUI = handButtonON;
+    }
+
+    public void ActivateSpell()
+    {
+        currentTool = 1;
+        currentToolUI.SetActive(false);
+        spellButtonON.SetActive(true);
+        currentToolUI = spellButtonON;
+    }
+
+    public void ActivateBrush()
+    {
+        currentTool = 2;
+        currentToolUI.SetActive(false);
+        brushButtonON.SetActive(true);
+        currentToolUI = brushButtonON;
+    }
+
+    public void ActivateShovel()
+    {
+        currentTool = 0;
+        currentToolUI.SetActive(false);
+        shovelButtonON.SetActive(true);
+        currentToolUI = shovelButtonON;
     }
 
     private void UpdateMeter(float damage)
@@ -142,10 +164,25 @@ public class ClickOnTiles : MonoBehaviour
         currentDurability -= damage;
         Debug.Log(currentDurability / graveDurability);
         text.text = currentDurability.ToString();
-        meterFill.fillAmount = currentDurability/ graveDurability;
+        meterFill.fillAmount = currentDurability / graveDurability;
 
-        if(currentDurability <= 0)
+        if (currentDurability <= 0)
         {
+            foreach(GameObject slot in inventorySlotsRobbing)
+            {
+                slot.SetActive(false);
+            }
+
+            for (int i = 0; i < tilesGeneratorScript.BoneInventory.Count; i++)
+            {
+                if(i > inventorySlotsRobbing.Length)
+                {
+                    inventorySlotsRobbing[i].SetActive(true);
+                    inventorySlotsRobbing[i].GetComponent<Image>().sprite = tilesGeneratorScript.BoneInventory[i].BoneSprite;
+                }
+
+            }
+            
             graveRobbing.SetActive(true);
             graveDigging.SetActive(false);
         }
@@ -186,7 +223,7 @@ public class ClickOnTiles : MonoBehaviour
                 }
                 dirtGrid[currentPos.x, currentPos.y] -= 1;
             }
-                
+
 
         UpdateGridData();
     }

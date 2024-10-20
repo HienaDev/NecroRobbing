@@ -1,12 +1,10 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SummonCheck : MonoBehaviour
 {
     [SerializeField] private Button summonButton;
-    [SerializeField]
-    private Drop[] summonSpaces;
-    private int numReady;
 
     [SerializeField] private GameObject headSprite;
     private BoneBase headBone;
@@ -16,75 +14,109 @@ public class SummonCheck : MonoBehaviour
     private BoneBase leftArmBone;
     [SerializeField] private GameObject rightArmSprite;
     private BoneBase rightArmBone;
+    public bool leftArm = false;
     [SerializeField] private GameObject leftLegSprite;
     private BoneBase leftLegBone;
     [SerializeField] private GameObject rightLegSprite;
     private BoneBase rightLegBone;
+    public bool leftLeg = false;
 
-        
+    [SerializeField] private SkeletonManager skeletonManager;
+       
+    private bool CheckIfReady()
+    {
+        return(headBone != null && torsoBone != null && leftArmBone != null && rightArmBone != null && leftLegBone != null && rightLegBone != null);
+    }
+
     public void SetHead(BoneBase head)
     {
         headBone = head;
         headSprite.GetComponent<Image>().sprite = headBone.BoneSprite;
         headSprite.GetComponent<Image>().color = Color.white;
+
+        if(CheckIfReady())
+        {
+            summonButton.interactable = true;
+        }
     }
+
+    public BoneBase GetHead() => headBone;
 
     public void SetTorso(BoneBase torso)
     {
         torsoBone = torso;
         torsoSprite.GetComponent<Image>().sprite = torsoBone.BoneSprite;
         torsoSprite.GetComponent<Image>().color = Color.white;
+
+        if (CheckIfReady())
+        {
+            summonButton.interactable = true;
+        }
     }
+
+    public BoneBase GetTorso() => torsoBone;
 
     public void SetLeftArm(BoneBase leftArm)
     {
         leftArmBone = leftArm;
         leftArmSprite.GetComponent<Image>().sprite = leftArmBone.BoneSprite;
         leftArmSprite.GetComponent<Image>().color = Color.white;
+
+        if (CheckIfReady())
+        {
+            summonButton.interactable = true;
+        }
     }
+
+    public BoneBase GetLeftArm() => leftArmBone;
 
     public void SetRightArm(BoneBase rightArm)
     {
         rightArmBone = rightArm;
         rightArmSprite.GetComponent<Image>().sprite = rightArmBone.BoneSprite;
         rightArmSprite.GetComponent<Image>().color = Color.white;
+
+        if (CheckIfReady())
+        {
+            summonButton.interactable = true;
+        }
     }
+
+    public BoneBase GetRightArm() => rightArmBone;
 
     public void SetLeftLeg(BoneBase leftLeg)
     {
         leftLegBone = leftLeg;
         leftLegSprite.GetComponent<Image>().sprite = leftLegBone.BoneSprite;
         leftLegSprite.GetComponent<Image>().color = Color.white;
+
+        if (CheckIfReady())
+        {
+            summonButton.interactable = true;
+        }
     }
+
+    public BoneBase GetLeftLeg() => leftLegBone;
 
     public void SetRightLeg(BoneBase rightLeg)
     {
         rightLegBone = rightLeg;
         rightLegSprite.GetComponent<Image>().sprite = rightLegBone.BoneSprite;
         rightLegSprite.GetComponent<Image>().color = Color.white;
-    }
 
-    void Start()
-    {
-        summonSpaces = FindObjectsByType<Drop>(0);
-    }
-
-    void Update()
-    {
-        foreach (Drop space in summonSpaces)
+        if (CheckIfReady())
         {
-            if (space.IsPlaced)
-                numReady++;
-        }
-        Debug.Log(numReady);
-        if (numReady == 6)
             summonButton.interactable = true;
-        else
-            numReady = 0;
+        }
     }
+
+    public BoneBase GetRightLeg() => headBone;
+
+
+
     public void Summon()
     {
-        Debug.Log("SUMMON CODE HERE");
+        skeletonManager.SummonSkeleton(headBone, torsoBone, rightLegBone, leftLegBone, rightArmBone, leftArmBone);
         summonButton.interactable = false;
     }
 }

@@ -9,8 +9,6 @@ public class GraveManager : MonoBehaviour
     [SerializeField] private GameObject graveDigging;
     private CheckIfPlayerInside checkPlayerScript;
 
-    [SerializeField] private GraveCountChecker graveCounter;
-
 
     [SerializeField] private GameObject grave;
     [SerializeField] private GameObject graveHole;
@@ -24,7 +22,7 @@ public class GraveManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (checkPlayerScript.PlayerInside && graveCounter.GraveCounter < 5)
+        if (checkPlayerScript.PlayerInside)
         {
 
             if(Input.GetKeyDown(KeyCode.E))
@@ -32,7 +30,7 @@ public class GraveManager : MonoBehaviour
 
                 graveSelection.SetActive(false);
                 graveDigging.SetActive(true);
-                graveCounter.IncreaseGraveCount();
+
                 grave.SetActive(false);
                 graveHole.SetActive(true);
                 gameObject.GetComponent<GraveManager>().enabled = false;

@@ -5,6 +5,8 @@ public class GoToSummoning : MonoBehaviour
 
     [SerializeField] private GameObject graveRobbing;
     [SerializeField] private GameObject summoning;
+    [SerializeField] private InventoryManager inventory;
+    [SerializeField] private TilesGenerator tileGenerator;
 
     private CheckIfPlayerInside checkScript;
 
@@ -21,6 +23,8 @@ public class GoToSummoning : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
+                Cursor.visible = true;
+                inventory.AddInventory(tileGenerator.BoneInventory);
                 graveRobbing.SetActive(false);
                 summoning.SetActive(true);
             }
