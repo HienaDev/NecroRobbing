@@ -31,6 +31,11 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
 
+    private void OnEnable()
+    {
+        animator.ResetTrigger("Dig");
+    }
+
     // Update is called once per frame
     void Update()
     {

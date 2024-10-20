@@ -14,6 +14,8 @@ public class TilesGenerator : MonoBehaviour
         public BoneBase boneBase;
     }
 
+
+
     [SerializeField] private GameObject[] graveParticles;
 
     [SerializeField] private Vector2Int gridSize;

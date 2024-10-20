@@ -34,6 +34,7 @@ public class GraveManager : MonoBehaviour
             {
 
                 player.canMove = false;
+                graveUsed = true;
                 StartCoroutine(Dig());
 
             }
@@ -51,7 +52,7 @@ public class GraveManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         grave.SetActive(false);
         graveHole.SetActive(true);
-        graveUsed = true;
+
 
         yield return new WaitForSeconds(4f);
         player.canMove = true;
