@@ -952,7 +952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6256372958330950266, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
       propertyPath: m_Name
-      value: Bone Summon (3)
+      value: Bone Leg Right
       objectReference: {fileID: 0}
     - target: {fileID: 6783906301986946139, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
       propertyPath: dropType
@@ -2231,7 +2231,7 @@ GameObject:
   - component: {fileID: 354730397}
   - component: {fileID: 354730396}
   m_Layer: 5
-  m_Name: Inventory Space (2)
+  m_Name: Inventory Arms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2682,7 +2682,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c0af23041c9975642a6f006f3a1dd402, type: 2}
   - {fileID: 11400000, guid: 22836a93bccffb24ebd7963ea963b6e6, type: 2}
   - {fileID: 11400000, guid: 180093fb204b55747b5571f82069c00d, type: 2}
-  - {fileID: 11400000, guid: d27c451bc4704cb4c9f8b26c731b6e24, type: 2}
   - {fileID: 11400000, guid: 1028660f31ef407419929cb0335bb875, type: 2}
   - {fileID: 11400000, guid: 2b2fddf1a3cec7248bb794a91afe0752, type: 2}
   - {fileID: 11400000, guid: c0af23041c9975642a6f006f3a1dd402, type: 2}
@@ -3049,7 +3048,7 @@ GameObject:
   - component: {fileID: 580270916}
   - component: {fileID: 580270915}
   m_Layer: 5
-  m_Name: Inventory Space (1)
+  m_Name: Inventory Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3794,7 +3793,7 @@ GameObject:
   - component: {fileID: 699359445}
   - component: {fileID: 699359444}
   m_Layer: 5
-  m_Name: Inventory Space (3)
+  m_Name: Inventory Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5472,7 +5471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6256372958330950266, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
       propertyPath: m_Name
-      value: Bone Summon (4)
+      value: Bone Leg Left
       objectReference: {fileID: 0}
     - target: {fileID: 6783906301986946139, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
       propertyPath: dropType
@@ -5893,7 +5892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6256372958330950266, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
       propertyPath: m_Name
-      value: Bone Summon (5)
+      value: Bone Torso
       objectReference: {fileID: 0}
     - target: {fileID: 6783906301986946139, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
       propertyPath: dropType
@@ -6057,13 +6056,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 181564869251453494, guid: 19e11758d138158438ef57d1c6423d36, type: 3}
+  m_Sprite: {fileID: 181564869251453494, guid: 09453d6cc1dd38948a918fd3a4fed44e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6832,13 +6831,13 @@ RectTransform:
   - {fileID: 1929129331}
   - {fileID: 141244557}
   - {fileID: 409029561}
-  - {fileID: 1613269008}
   - {fileID: 1899657038}
   - {fileID: 2062387607}
   - {fileID: 580270914}
   - {fileID: 354730395}
   - {fileID: 699359443}
   - {fileID: 488680818}
+  - {fileID: 1613269008}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7338,7 +7337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6256372958330950266, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
       propertyPath: m_Name
-      value: Bone Summon (2)
+      value: Bone Left Arm
       objectReference: {fileID: 0}
     - target: {fileID: 6783906301986946139, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
       propertyPath: dropType
@@ -8699,7 +8698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6256372958330950266, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
       propertyPath: m_Name
-      value: Bone Summon (1)
+      value: Bone Right Arm
       objectReference: {fileID: 0}
     - target: {fileID: 6783906301986946139, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
       propertyPath: dropType
@@ -8909,6 +8908,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f24868fe5eed26641b274d216a08dc4b, type: 3}
+--- !u!1 &2045210775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6256372958330950266, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
+  m_PrefabInstance: {fileID: 1795285058960727692}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2062387606
 GameObject:
   m_ObjectHideFlags: 0
@@ -8922,7 +8926,7 @@ GameObject:
   - component: {fileID: 2062387608}
   - component: {fileID: 2062387610}
   m_Layer: 5
-  m_Name: Inventory Space
+  m_Name: Inventory Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9102,6 +9106,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   summonButton: {fileID: 1613269009}
+  summonSpaces: []
+  headSprite: {fileID: 2045210775}
+  torsoSprite: {fileID: 0}
+  leftArmSprite: {fileID: 0}
+  rightArmSprite: {fileID: 0}
+  leftLegSprite: {fileID: 0}
+  rightLegSprite: {fileID: 0}
 --- !u!224 &2092829355 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8692516487350042095, guid: f24868fe5eed26641b274d216a08dc4b, type: 3}
@@ -9308,7 +9319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6256372958330950266, guid: bd8fa374e900ccb48b5bf88f64a9d214, type: 3}
       propertyPath: m_Name
-      value: Bone Summon
+      value: Bone Head
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

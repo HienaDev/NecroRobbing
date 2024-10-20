@@ -12,6 +12,8 @@ public class InventorySetter : MonoBehaviour
     private InventoryManager inventoryManager;
     private int i = 0;
 
+    
+
     void Start()
     {
         inventoryManager = FindFirstObjectByType<InventoryManager>();
