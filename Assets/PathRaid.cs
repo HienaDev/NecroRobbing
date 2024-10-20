@@ -2,7 +2,14 @@ using UnityEngine;
 
 public class PathRaid : MonoBehaviour
 {
-    [SerializedField] private float moveSpeed;
+
+    [SerializeField] private Transform[] Points;
+    [SerializeField] private Transform firstEncounter;
+    [SerializeField] private Transform secondEncounter;
+    [SerializeField] private Transform thirdEncounter;
+    [SerializeField] private Transform endEncounter;
+
+    [SerializeField] private float moveSpeed;
 
     private int pointsIndex;
 

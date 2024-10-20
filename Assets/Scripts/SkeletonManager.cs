@@ -15,16 +15,12 @@ public class SkeletonManager : MonoBehaviour
     [SerializeField] private SpriteRenderer armRight;
     [SerializeField] private SpriteRenderer armLeft;
 
-    [SerializeField] private float skeletonSpeed;
 
-    private Rigidbody2D rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
 
-        rb.velocity = new Vector2(skeletonSpeed, 0f);
     }
 
     public void SummonSkeleton(BoneBase head, BoneBase torso, BoneBase legRight, BoneBase legLeft, BoneBase armRight, BoneBase armLeft)
