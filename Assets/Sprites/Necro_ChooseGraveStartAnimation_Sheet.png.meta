@@ -513,8 +513,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d0ccf352b514394e8dc0561bd0d60d0
-      internalID: -1635092629
+      spriteID: eb6f66f7f72e606488b9aa44db09921b
+      internalID: 1499825556
       vertices: []
       indices: 
       edges: []
@@ -523,7 +523,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 402032dd85159034a87109f2cfd71568
+    spriteID: 35778b96f18fd114883350ed02153ce1
     internalID: 0
     vertices: []
     indices: 
@@ -540,7 +540,7 @@ TextureImporter:
       Necro_ChooseGraveStartAnimation_Sheet_12: -4121667936634657923
       Necro_ChooseGraveStartAnimation_Sheet_13: 5583103155111489315
       Necro_ChooseGraveStartAnimation_Sheet_14: 8049085993434983033
-      Necro_ChooseGraveStartAnimation_Sheet_15: -1635092629
+      Necro_ChooseGraveStartAnimation_Sheet_15: 1499825556
       Necro_ChooseGraveStartAnimation_Sheet_2: -7780277040159395772
       Necro_ChooseGraveStartAnimation_Sheet_3: -6677159926043017276
       Necro_ChooseGraveStartAnimation_Sheet_4: -8843604224522133054
