@@ -19,7 +19,13 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
-        AddInventory(testInventory);
+        
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.V))
+            AddInventory(testInventory);
     }
 
     public void AddInventory(List<BoneBase> inventory)
