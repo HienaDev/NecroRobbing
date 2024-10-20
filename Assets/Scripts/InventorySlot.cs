@@ -5,6 +5,7 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] GameObject bonePrefab;
     private Canvas canvas;
+    int index;
     private BoneBase boneBase;
     public BoneBase BoneBase
     {
@@ -18,11 +19,17 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
     void Start()
     {
         canvas = FindFirstObjectByType<Canvas>();
+        index = transform.GetSiblingIndex();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        GameObject newBone = Instantiate(bonePrefab,canvas.transform);
-        newBone.GetComponent<BoneSetup>().BoneBase = boneBase;
+        if (boneBase != null)
+        {
+            GameObject newBone = Instantiate(bonePrefab,canvas.transform);
+            newBone.GetComponent<BoneSetup>().BoneBase = boneBase;
+            Debug.Log(index,gameObject);
+            GetComponentInParent<InventorySetter>().ResetInventory(index);
+        }
     }
 }
