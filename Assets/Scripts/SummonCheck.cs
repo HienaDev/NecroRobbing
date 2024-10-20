@@ -23,14 +23,21 @@ public class SummonCheck : MonoBehaviour
 
     [SerializeField] private SkeletonManager skeletonManager;
     private SoundsScript soundScript;
-    
+
+    [SerializeField]
+    private GameObject summonButtonOn;
+    [SerializeField]
+    private GameObject summonButtonOff;
+
     void Start()
     {
         soundScript = GetComponent<SoundsScript>();
     }
     private bool CheckIfReady()
     {
-        return(headBone != null && torsoBone != null && leftArmBone != null && rightArmBone != null && leftLegBone != null && rightLegBone != null);
+        summonButtonOn.SetActive(true);
+        summonButtonOff.SetActive(false);
+        return (headBone != null && torsoBone != null && leftArmBone != null && rightArmBone != null && leftLegBone != null && rightLegBone != null);
     }
 
     public void SetHead(BoneBase head)
@@ -122,6 +129,7 @@ public class SummonCheck : MonoBehaviour
     public void Summon()
     {
         skeletonManager.SummonSkeleton(headBone, torsoBone, rightLegBone, leftLegBone, rightArmBone, leftArmBone);
+
         summonButton.interactable = false;
     }
 }

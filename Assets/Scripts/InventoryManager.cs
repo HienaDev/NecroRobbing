@@ -16,6 +16,12 @@ public class InventoryManager : MonoBehaviour
     public List<BoneBase> ArmInventory => armInventory;
 
 
+
+    private void Start()
+    {
+        AddInventory(testInventory);
+    }
+
     public void AddInventory(List<BoneBase> inventory)
     {
         skullInventory = new List<BoneBase>();
