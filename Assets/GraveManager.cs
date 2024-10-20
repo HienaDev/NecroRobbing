@@ -11,44 +11,35 @@ public class GraveManager : MonoBehaviour
 
     [SerializeField] private GraveCountChecker graveCounter;
 
-    private SpriteRenderer[] renderers;
+
+    [SerializeField] private GameObject grave;
+    [SerializeField] private GameObject graveHole;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         checkPlayerScript = GetComponentInChildren<CheckIfPlayerInside>();
-        renderers = GetComponentsInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (checkPlayerScript.PlayerInside)
+        if (checkPlayerScript.PlayerInside && graveCounter.GraveCounter < 5)
         {
-            foreach (SpriteRenderer sr in renderers)
-            {
-                sr.color = Color.red;
-            }
+
             if(Input.GetKeyDown(KeyCode.E))
             {
+
                 graveSelection.SetActive(false);
                 graveDigging.SetActive(true);
                 graveCounter.IncreaseGraveCount();
+                grave.SetActive(false);
+                graveHole.SetActive(true);
                 gameObject.GetComponent<GraveManager>().enabled = false;
             }
                 
         }
-        else
-        {
-            foreach (SpriteRenderer sr in renderers)
-            {
-                sr.color = Color.white;
-            }
-        }
+
     }
 
-    private void FixedUpdate()
-    {
-        
-    }
 }
