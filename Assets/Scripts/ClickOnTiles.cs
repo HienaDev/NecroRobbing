@@ -48,8 +48,7 @@ public class ClickOnTiles : MonoBehaviour
     private float currentDurability = 20;
     [SerializeField] private TextMeshProUGUI text;
 
-    [SerializeField] private GameObject graveRobbing;
-    [SerializeField] private GameObject graveDigging;
+    [SerializeField] private GameObject transition;
 
     [SerializeField] private GameObject[] inventorySlotsRobbing;
 
@@ -188,9 +187,8 @@ public class ClickOnTiles : MonoBehaviour
                 }
 
             }
-            
-            graveRobbing.SetActive(true);
-            graveDigging.SetActive(false);
+
+            transition.SetActive(true);
         }
     }
 
