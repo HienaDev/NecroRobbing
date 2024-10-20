@@ -28,7 +28,6 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         {
             GameObject newBone = Instantiate(bonePrefab,canvas.transform);
             newBone.GetComponent<BoneSetup>().BoneBase = boneBase;
-            Debug.Log(index,gameObject);
             GetComponentInParent<InventorySetter>().ResetInventory(index);
         }
     }
